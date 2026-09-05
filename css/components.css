@@ -1,0 +1,587 @@
+/* ==========================================================================
+   TRIFLEX WHITE-FIRST COMPONENTS & NAVIGATION (65/20/10/5 SYSTEM)
+   ========================================================================== */
+
+/* --- TYPOGRAPHY UTILITIES --- */
+.display-hero {
+  font-family: var(--font-heading);
+  font-size: clamp(2.2rem, 4.4vw, 3.6rem);
+  font-weight: 800;
+  line-height: 1.02;
+  letter-spacing: -0.025em;
+  text-transform: uppercase;
+  color: var(--brand-navy);
+}
+
+.heading-xl {
+  font-family: var(--font-heading);
+  font-size: clamp(1.5rem, 2.8vw, 2.2rem);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: var(--brand-navy);
+}
+
+.heading-lg {
+  font-family: var(--font-heading);
+  font-size: clamp(1.2rem, 2.2vw, 1.75rem);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: var(--brand-navy);
+}
+
+.heading-md {
+  font-family: var(--font-heading);
+  font-size: clamp(1rem, 1.4vw, 1.25rem);
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--text-primary);
+}
+
+.eyebrow-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 12px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-full);
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--brand-navy);
+  margin-bottom: 14px;
+  white-space: nowrap;
+  box-shadow: var(--shadow-card);
+}
+
+.eyebrow-dot {
+  width: 6px;
+  height: 6px;
+  background-color: var(--accent-lime);
+  border-radius: 50%;
+  box-shadow: 0 0 6px rgba(183, 230, 0, 0.8);
+  flex-shrink: 0;
+}
+
+/* Energy Lime as a precision signal */
+.highlight-lime {
+  color: var(--brand-navy);
+  border-bottom: 3px solid var(--accent-lime);
+  padding-bottom: 2px;
+  display: inline-block;
+}
+
+.text-muted-p {
+  color: var(--text-secondary);
+  font-size: clamp(0.88rem, 1.05vw, 1rem);
+  line-height: 1.55;
+}
+
+.mono-tag {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent-lime);
+  background: var(--brand-navy);
+  padding: 3px 8px;
+  border-radius: var(--radius-sm);
+  display: inline-block;
+  margin-bottom: 8px;
+}
+
+/* --- EXACT BUTTON SYSTEM --- */
+/* Primary Button: Background #B7E600 (Energy Lime), Text #102A43 (Performance Navy) */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 10px 20px;
+  background-color: var(--accent-lime);
+  color: var(--brand-navy);
+  font-family: var(--font-heading);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--accent-lime);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  white-space: nowrap;
+  box-shadow: 0 2px 8px rgba(183, 230, 0, 0.35);
+  flex-shrink: 0;
+}
+
+.btn-primary:hover {
+  background-color: var(--accent-lime-hover);
+  color: var(--brand-navy);
+  border-color: var(--accent-lime-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(183, 230, 0, 0.5);
+}
+
+.btn-primary .btn-arrow {
+  color: var(--brand-navy);
+  transition: transform var(--transition-fast);
+}
+
+.btn-primary:hover .btn-arrow {
+  transform: translateX(3px);
+}
+
+/* Secondary Button: Transparent / White, Border #102A43, Text #102A43 */
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 10px 18px;
+  background-color: var(--bg-surface);
+  color: var(--brand-navy);
+  font-family: var(--font-heading);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--brand-navy);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.btn-secondary:hover {
+  background-color: var(--bg-surface-alt);
+  border-color: var(--brand-navy);
+  transform: translateY(-1px);
+}
+
+.btn-secondary-dark {
+  background-color: rgba(255, 255, 255, 0.08);
+  color: #FFFFFF;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.btn-secondary-dark:hover {
+  background-color: rgba(255, 255, 255, 0.16);
+  border-color: #FFFFFF;
+}
+
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--brand-navy);
+  font-family: var(--font-heading);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  white-space: nowrap;
+}
+
+.btn-ghost:hover {
+  color: var(--brand-navy);
+  text-decoration: underline 2px var(--accent-lime);
+  transform: translateX(3px);
+}
+
+.btn-sm {
+  padding: 6px 12px;
+  font-size: 0.72rem;
+}
+
+/* --- HEADER & NAVIGATION: TOP WHOLESALE ANNOUNCEMENT BAR (SCROLLABLE VIEW) --- */
+.wholesale-announcement-bar {
+  background-color: var(--brand-navy);
+  border-bottom: 1px solid rgba(200, 240, 0, 0.16);
+  padding: 8px 0;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: #FFFFFF;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  z-index: 101;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Elegant edge gradient fade so ticker items slide smoothly in and out */
+.wholesale-announcement-bar::before,
+.wholesale-announcement-bar::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 40px;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.wholesale-announcement-bar::before {
+  left: 0;
+  background: linear-gradient(90deg, var(--brand-navy) 15%, rgba(10, 18, 26, 0) 100%);
+}
+
+.wholesale-announcement-bar::after {
+  right: 0;
+  background: linear-gradient(270deg, var(--brand-navy) 15%, rgba(10, 18, 26, 0) 100%);
+}
+
+.announcement-scroll-view {
+  display: flex;
+  align-items: center;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
+  -webkit-overflow-scrolling: touch; /* iOS momentum touch scroll */
+  cursor: grab;
+  width: 100%;
+  scroll-behavior: auto;
+}
+
+.announcement-scroll-view::-webkit-scrollbar {
+  display: none; /* WebKit/Chrome/Safari */
+}
+
+.announcement-scroll-view:active {
+  cursor: grabbing;
+}
+
+.announcement-track {
+  display: inline-flex;
+  align-items: center;
+  width: max-content;
+  flex-shrink: 0;
+  will-change: transform;
+}
+
+/* Fallback pure CSS marquee animation (active if JS is delayed or disabled) */
+@keyframes ticker-marquee-scroll {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-25%, 0, 0);
+  }
+}
+
+.announcement-track.css-marquee {
+  animation: ticker-marquee-scroll 32s linear infinite;
+}
+
+.announcement-track.css-marquee:hover,
+.announcement-track.css-marquee:active {
+  animation-play-state: paused;
+}
+
+.announcement-track.js-controlled {
+  animation: none !important;
+  transform: none !important;
+}
+
+.announcement-group {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  padding-right: 16px;
+  flex-shrink: 0;
+}
+
+.ticker-item {
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+  color: #FFFFFF;
+  font-size: 0.68rem;
+  letter-spacing: 0.06em;
+}
+
+.ticker-sep {
+  opacity: 0.45;
+  color: var(--accent-lime);
+  font-size: 0.72rem;
+  display: inline-flex;
+  align-items: center;
+}
+
+.announcement-highlight {
+  color: var(--accent-lime);
+  background: rgba(183, 230, 0, 0.14);
+  padding: 2px 7px;
+  border-radius: 3px;
+  border: 1px solid rgba(183, 230, 0, 0.28);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+}
+
+.main-header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  background-color: var(--bg-surface); /* Pure White #FFFFFF */
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border-color); /* Cool Grey #DCE3E8 */
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+  gap: 16px;
+}
+
+/* --- HORIZONTAL BRAND LOGO LOCKUP (EMBLEM LEFT + TEXT RIGHT) --- */
+.brand-logo-wrap {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  flex-shrink: 0;
+  transition: opacity var(--transition-fast), transform var(--transition-fast);
+}
+
+.brand-logo-wrap:hover {
+  opacity: 0.88;
+  transform: translateY(-1px);
+}
+
+.brand-emblem-img {
+  height: 30px;
+  width: auto;
+  aspect-ratio: 501 / 353;
+  object-fit: contain;
+  display: block;
+  flex-shrink: 0;
+}
+
+.brand-emblem-img-white {
+  height: 32px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+  flex-shrink: 0;
+}
+
+.brand-text-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 1;
+}
+
+.brand-title-text {
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--brand-navy); /* Performance Navy #102A43 */
+  line-height: 1;
+  display: block;
+}
+
+.brand-title-text.text-white {
+  color: #FFFFFF;
+}
+
+.brand-subtitle-tag {
+  font-family: var(--font-mono);
+  font-size: 0.58rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text-secondary); /* Slate #62727F */
+  margin-top: 3px;
+  display: block;
+}
+
+.brand-subtitle-tag.tag-lime {
+  color: var(--accent-lime); /* Energy Lime #B7E600 */
+}
+
+.desktop-nav-menu {
+  display: flex;
+  align-items: center;
+  gap: clamp(12px, 1.5vw, 20px);
+  flex: 1;
+  justify-content: center;
+}
+
+.nav-item-dropdown {
+  position: relative;
+}
+
+.nav-link {
+  font-family: var(--font-heading);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 0;
+  white-space: nowrap;
+}
+
+.nav-link:hover, .nav-link.active {
+  color: var(--brand-navy);
+}
+
+.nav-link.active {
+  color: var(--brand-navy);
+  border-bottom: 2px solid var(--accent-lime);
+}
+
+.mega-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(8px);
+  background-color: #FFFFFF;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 10px;
+  min-width: 200px;
+  box-shadow: var(--shadow-modal);
+  opacity: 0;
+  visibility: hidden;
+  transition: all var(--transition-fast);
+  z-index: 101;
+}
+
+.nav-item-dropdown:hover .mega-dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
+.mega-dropdown-item {
+  display: block;
+  padding: 6px 10px;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  white-space: nowrap;
+}
+
+.mega-dropdown-item:hover {
+  background-color: var(--bg-surface-alt);
+  color: var(--brand-navy);
+  transform: translateX(3px);
+}
+
+.header-right-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.search-trigger-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 6px 10px;
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--text-secondary);
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.search-trigger-btn:hover {
+  border-color: var(--brand-navy);
+  color: var(--brand-navy);
+}
+
+.search-kbd {
+  background: var(--brand-navy);
+  color: var(--accent-lime);
+  padding: 1px 5px;
+  border-radius: 3px;
+  font-size: 0.62rem;
+  font-weight: 700;
+}
+
+.enquiry-bag-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 6px 12px;
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-heading);
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--brand-navy);
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.enquiry-bag-btn:hover {
+  border-color: var(--brand-navy);
+}
+
+/* 5% Energy Lime Signal Badge */
+.bag-badge-count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 17px;
+  height: 17px;
+  padding: 0 4px;
+  background-color: var(--accent-lime);
+  color: var(--brand-navy);
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 900;
+  border-radius: var(--radius-full);
+}
+
+.mobile-menu-toggle {
+  display: none;
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  color: var(--brand-navy);
+  cursor: pointer;
+  padding: 6px 10px;
+  font-size: 1rem;
+  line-height: 1;
+}

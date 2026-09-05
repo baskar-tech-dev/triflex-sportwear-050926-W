@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Showcase | TriFlex Luxury Activewear</title>
+  <meta name="description" content="Explore TriFlex luxury performance sportswear: Dry fit t-shirts, lycra shorts, track pants, cargo joggers, and performance polos.">
+  
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ==========================================
+       HEADER & NAVIGATION
+       ========================================== -->
+  <header class="header" id="main-header" role="banner">
+    <div class="container header-container">
+      <nav class="navbar" aria-label="Main Navigation">
+        <!-- Floating Brand Logo -->
+        <a href="index.html" class="brand-logo-link" aria-label="TRIFLEX Home">
+          <img src="assets/main/triflex-emblem-white.png" alt="TRIFLEX Luxury Sportswear" class="brand-logo-img">
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <ul class="nav-menu desktop-nav-menu">
+          <li><a href="index.html#collection-section" class="nav-link">EXPLORE</a></li>
+          <li><a href="index.html#movement-section" class="nav-link">MOVEMENT</a></li>
+          <li><a href="products.html" class="nav-link active">PRODUCTS</a></li>
+          <li><a href="about.html" class="nav-link">STORY</a></li>
+          <li><a href="contact.html" class="nav-link">CONTACT</a></li>
+        </ul>
+
+        <!-- Right Navigation & Menu Button -->
+        <div class="header-right-group">
+          <button class="nav-enquire-btn trigger-enquire" aria-label="Enquire Platform">
+            <span>ENQUIRE</span>
+            <span class="btn-arrow">&rarr;</span>
+          </button>
+
+          <button class="menu-toggle-btn" id="drawer-open-btn" aria-label="Toggle Navigation Menu" aria-expanded="false" aria-controls="mobile-drawer">
+            <span class="menu-label">MENU</span>
+            <div class="hamburger-icon">
+              <span></span>
+              <span></span>
+            </div>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- CINEMATIC FULL-SCREEN NAVIGATION OVERLAY -->
+  <div class="mobile-overlay" id="mobile-overlay" aria-hidden="true"></div>
+  <aside class="mobile-drawer" id="mobile-drawer" aria-label="Cinematic Navigation" aria-hidden="true">
+    <div class="drawer-backdrop-image" style="background-image: url('images/banner-1.png');"></div>
+    <div class="drawer-gradient-overlay"></div>
+    
+    <div class="drawer-header">
+      <a href="index.html" class="drawer-logo-link" aria-label="TRIFLEX Home">
+        <img src="assets/main/triflex-emblem-white.png" alt="TRIFLEX Logo" class="drawer-logo-img">
+      </a>
+      <button class="drawer-close-btn" id="drawer-close-btn" aria-label="Close Menu">
+        <span class="close-text">CLOSE</span>
+        <span class="close-icon">&times;</span>
+      </button>
+    </div>
+
+    <div class="drawer-body">
+      <nav class="drawer-nav-list" aria-label="Mobile Navigation Menu">
+        <ul>
+          <li><a href="index.html#collection-section" class="drawer-link drawer-nav"><span class="nav-num">01</span><span class="nav-text">EXPLORE</span></a></li>
+          <li><a href="index.html#movement-section" class="drawer-link drawer-nav"><span class="nav-num">02</span><span class="nav-text">MOVEMENT</span></a></li>
+          <li><a href="products.html" class="drawer-link drawer-nav"><span class="nav-num">03</span><span class="nav-text">PRODUCTS</span></a></li>
+          <li><a href="about.html" class="drawer-link drawer-nav"><span class="nav-num">04</span><span class="nav-text">PERFORMANCE</span></a></li>
+          <li><a href="about.html" class="drawer-link drawer-nav"><span class="nav-num">05</span><span class="nav-text">OUR STORY</span></a></li>
+          <li><a href="contact.html" class="drawer-link drawer-nav"><span class="nav-num">06</span><span class="nav-text">CONTACT</span></a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="drawer-footer">
+      <div class="drawer-brand-tag">JUST KEEP GOING.</div>
+      <div class="drawer-category-info">Indian Sportswear for Men, Women &amp; Kids</div>
+      <button class="btn-primary-neon trigger-enquire drawer-enquire-btn">
+        ENQUIRE NOW &rarr;
+      </button>
+    </div>
+  </aside>
+
+  <!-- Page Banner -->
+  <section style="padding: 160px 0 60px 0; background: var(--bg-dark); border-bottom: 1px solid rgba(255,255,255,0.08);">
+    <div class="container">
+      <span class="section-tagline">CATALOGUE EDITION 2026</span>
+      <h1 class="text-huge">PRECISION <span class="text-gradient">GEAR.</span></h1>
+    </div>
+  </section>
+
+  <!-- Product Filter Bar & Showcase Grid -->
+  <section class="products-experience">
+    <div class="container">
+      
+      <!-- Category Filter Tabs -->
+      <div style="display: flex; gap: 14px; margin-bottom: 50px; flex-wrap: wrap;" id="catalog-filter-bar">
+        <button class="btn-magnetic filter-tab-btn active" data-filter="all">ALL GEAR</button>
+        <button class="btn-magnetic filter-tab-btn" data-filter="tshirts">T-SHIRTS</button>
+        <button class="btn-magnetic filter-tab-btn" data-filter="shorts">SHORTS</button>
+        <button class="btn-magnetic filter-tab-btn" data-filter="trackpants">TRACK PANTS</button>
+        <button class="btn-magnetic filter-tab-btn" data-filter="cargopants">CARGO PANTS</button>
+        <button class="btn-magnetic filter-tab-btn" data-filter="polos">POLOS</button>
+      </div>
+
+      <!-- Grid -->
+      <div class="product-showcase-grid" id="catalog-grid">
+        
+        <!-- Item 1 -->
+        <div class="luxury-prod-card" data-category="tshirts">
+          <span class="prod-badge-new">NEW EDITION</span>
+          <div class="prod-img-box">
+            <img src="images/prod-1.png" alt="Snowfall Dry Fit T-Shirt" loading="lazy">
+            <button class="prod-quick-btn">QUICK VIEW &bull; INSPECT</button>
+          </div>
+          <div class="prod-details-meta">
+            <h3 class="prod-title-text">Snowfall Dry Fit T-Shirt</h3>
+            <p class="prod-subtitle-spec">Hydrophobic Micro-Weave &bull; M / L / XL / XXL</p>
+          </div>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="luxury-prod-card" data-category="trackpants">
+          <span class="prod-badge-new">BESTSELLER</span>
+          <div class="prod-img-box">
+            <img src="images/prod-2.png" alt="Mars Melange Track Pant" loading="lazy">
+            <button class="prod-quick-btn">QUICK VIEW &bull; INSPECT</button>
+          </div>
+          <div class="prod-details-meta">
+            <h3 class="prod-title-text">Mars Melange Track Pant</h3>
+            <p class="prod-subtitle-spec">Thermal Regulating Weave &bull; S / M / L / XL</p>
+          </div>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="luxury-prod-card" data-category="shorts">
+          <span class="prod-badge-new">LIMITED</span>
+          <div class="prod-img-box">
+            <img src="images/prod-3.png" alt="Stealth Lycra Sport Shorts" loading="lazy">
+            <button class="prod-quick-btn">QUICK VIEW &bull; INSPECT</button>
+          </div>
+          <div class="prod-details-meta">
+            <h3 class="prod-title-text">Stealth Lycra Sport Shorts</h3>
+            <p class="prod-subtitle-spec">4-Way Compression Stretch &bull; M / L / XL</p>
+          </div>
+        </div>
+
+        <!-- Item 4 -->
+        <div class="luxury-prod-card" data-category="cargopants">
+          <span class="prod-badge-new">NEW</span>
+          <div class="prod-img-box">
+            <img src="images/prod-4.png" alt="Tactical Cargo Jogger" loading="lazy">
+            <button class="prod-quick-btn">QUICK VIEW &bull; INSPECT</button>
+          </div>
+          <div class="prod-details-meta">
+            <h3 class="prod-title-text">Tactical Cargo Jogger</h3>
+            <p class="prod-subtitle-spec">Reinforced Flex Weave &bull; M / L / XL / XXL</p>
+          </div>
+        </div>
+
+        <!-- Item 5 -->
+        <div class="luxury-prod-card" data-category="polos">
+          <span class="prod-badge-new">POPULAR</span>
+          <div class="prod-img-box">
+            <img src="images/prod-5.png" alt="Pro-Tech Polo Shirt" loading="lazy">
+            <button class="prod-quick-btn">QUICK VIEW &bull; INSPECT</button>
+          </div>
+          <div class="prod-details-meta">
+            <h3 class="prod-title-text">Pro-Tech Performance Polo</h3>
+            <p class="prod-subtitle-spec">Structured Collar &bull; M / L / XL / XXL</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick View Modal -->
+  <div class="modal-overlay" id="quickview-modal">
+    <div class="modal-content-box">
+      <button class="modal-close-btn" id="modal-close-btn">&times;</button>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; align-items: center;">
+        <div style="background: #111; padding: 20px;">
+          <img src="images/prod-1.png" alt="Product Image" id="modal-prod-img" style="width: 100%; height: auto;">
+        </div>
+        <div>
+          <span style="font-family: var(--font-accent); font-size: 0.75rem; letter-spacing: 3px; color: var(--accent-orange);" id="modal-prod-category">ACTIVEWEAR</span>
+          <h3 style="font-family: var(--font-display); font-size: 2.2rem; margin: 10px 0;" id="modal-prod-title">Snowfall Dry Fit T-Shirt</h3>
+          <p style="color: var(--text-grey); font-size: 0.9rem; margin-bottom: 20px;">
+            Engineered with high-density moisture wicking fabric, offering maximum stretch and thermal breathability.
+          </p>
+          <div style="margin-bottom: 24px;">
+            <div style="font-size: 0.8rem; font-weight: 700; margin-bottom: 8px;">AVAILABLE SIZES:</div>
+            <div style="display: flex; gap: 10px;">
+              <span style="padding: 6px 14px; border: 1px solid rgba(255,255,255,0.2); font-size: 0.8rem;">M</span>
+              <span style="padding: 6px 14px; border: 1px solid rgba(255,255,255,0.2); font-size: 0.8rem;">L</span>
+              <span style="padding: 6px 14px; border: 1px solid rgba(255,255,255,0.2); font-size: 0.8rem;">XL</span>
+              <span style="padding: 6px 14px; border: 1px solid rgba(255,255,255,0.2); font-size: 0.8rem;">XXL</span>
+            </div>
+          </div>
+          <a href="contact.html" class="btn-magnetic btn-primary-filled">INQUIRE WHOLESALE ORDER &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <img src="assets/main/triflex-emblem-white.png" alt="TRIFLEX Logo" class="footer-logo-img">
+          <div class="footer-tagline">JUST KEEP GOING.</div>
+        </div>
+
+        <ul class="footer-links">
+          <li><a href="index.html#collection-section" class="footer-link">EXPLORE</a></li>
+          <li><a href="index.html#movement-section" class="footer-link">MOVEMENT</a></li>
+          <li><a href="products.html" class="footer-link">PRODUCTS</a></li>
+          <li><a href="about.html" class="footer-link">STORY</a></li>
+          <li><a href="contact.html" class="footer-link">CONTACT</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 TRIFLEX. ALL RIGHTS RESERVED.</div>
+        <div>ENGINEERED IN TIRUPUR &bull; BUILT FOR THE WORLD</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

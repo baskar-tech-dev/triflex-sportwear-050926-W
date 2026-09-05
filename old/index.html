@@ -1,0 +1,1325 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TRIFLEX | Just Keep Going | Premium Athletic Sportswear</title>
+    <meta
+      name="description"
+      content="Designed for movement. Made in India. Ready for everywhere. Explore TriFlex high performance activewear."
+    />
+
+    <!-- Fonts & Master Stylesheet -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- ==========================================
+       CINEMATIC SHUTTER & PORTAL ZOOM SPLASH SCREEN
+       ========================================== -->
+    <div id="splash-screen" class="splash-screen-overlay">
+      <div class="splash-panel splash-panel-top"></div>
+      <div class="splash-panel splash-panel-bottom"></div>
+      <div class="splash-logo-container">
+        <svg
+          class="splash-svg-logo"
+          viewBox="0 0 200 200"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <!-- Lower Ribbon Left Wing (Center-Outward Burst) -->
+          <path
+            class="logo-stroke stroke-burst"
+            d="M 117 130 L 87 100 L 42 145"
+          />
+          <!-- Lower Ribbon Right Wing (Center-Outward Burst) -->
+          <path class="logo-stroke stroke-burst" d="M 117 130 L 157 90" />
+          <!-- Upper Chevron Left Wing (Center-Outward Burst) -->
+          <path class="logo-stroke stroke-burst" d="M 117 80 L 87 50" />
+          <!-- Upper Chevron Right Wing (Center-Outward Burst) -->
+          <path class="logo-stroke stroke-burst" d="M 117 80 L 147 50" />
+        </svg>
+        <div class="splash-brand-text">TRIFLEX</div>
+      </div>
+    </div>
+
+    <!-- ==========================================
+       HEADER & NAVIGATION
+       ========================================== -->
+    <header class="header" id="main-header" role="banner">
+      <div class="container header-container">
+        <nav class="navbar" aria-label="Main Navigation">
+          <!-- Floating Brand Logo (No box, capsule, or container) -->
+          <a
+            href="index.html"
+            class="brand-logo-link"
+            aria-label="TRIFLEX Home"
+          >
+            <img
+              src="assets/main/triflex-emblem-white.png"
+              alt="TRIFLEX Luxury Sportswear"
+              class="brand-logo-img"
+            />
+          </a>
+
+          <!-- Desktop Navigation Links -->
+          <ul class="nav-menu desktop-nav-menu">
+            <li><a href="#collection-section" class="nav-link">EXPLORE</a></li>
+            <li><a href="#movement-section" class="nav-link">MOVEMENT</a></li>
+            <li><a href="#products-section" class="nav-link">PRODUCTS</a></li>
+            <li><a href="#story-section" class="nav-link">STORY</a></li>
+            <li><a href="#contact-section" class="nav-link">CONTACT</a></li>
+          </ul>
+
+          <!-- Right Navigation & Menu Button -->
+          <div class="header-right-group">
+            <button
+              class="nav-enquire-btn trigger-enquire"
+              aria-label="Enquire Platform"
+            >
+              <span>ENQUIRE</span>
+              <span class="btn-arrow">&rarr;</span>
+            </button>
+
+            <button
+              class="menu-toggle-btn"
+              id="drawer-open-btn"
+              aria-label="Toggle Navigation Menu"
+              aria-expanded="false"
+              aria-controls="mobile-drawer"
+            >
+              <span class="menu-label">MENU</span>
+              <div class="hamburger-icon">
+                <span></span>
+                <span></span>
+              </div>
+            </button>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- ==========================================
+       CINEMATIC FULL-SCREEN NAVIGATION OVERLAY
+       ========================================== -->
+    <div class="mobile-overlay" id="mobile-overlay" aria-hidden="true"></div>
+    <aside
+      class="mobile-drawer"
+      id="mobile-drawer"
+      aria-label="Cinematic Navigation"
+      aria-hidden="true"
+    >
+      <div
+        class="drawer-backdrop-image"
+        style="background-image: url(&quot;images/banner-1.png&quot;)"
+      ></div>
+      <div class="drawer-gradient-overlay"></div>
+
+      <div class="drawer-header">
+        <a href="index.html" class="drawer-logo-link" aria-label="TRIFLEX Home">
+          <img
+            src="assets/main/triflex-emblem-white.png"
+            alt="TRIFLEX Logo"
+            class="drawer-logo-img"
+          />
+        </a>
+        <button
+          class="drawer-close-btn"
+          id="drawer-close-btn"
+          aria-label="Close Menu"
+        >
+          <span class="close-text">CLOSE</span>
+          <span class="close-icon">&times;</span>
+        </button>
+      </div>
+
+      <div class="drawer-body">
+        <nav class="drawer-nav-list" aria-label="Mobile Navigation Menu">
+          <ul>
+            <li>
+              <a href="#collection-section" class="drawer-link drawer-nav"
+                ><span class="nav-num">01</span
+                ><span class="nav-text">EXPLORE</span></a
+              >
+            </li>
+            <li>
+              <a href="#movement-section" class="drawer-link drawer-nav"
+                ><span class="nav-num">02</span
+                ><span class="nav-text">MOVEMENT</span></a
+              >
+            </li>
+            <li>
+              <a href="#products-section" class="drawer-link drawer-nav"
+                ><span class="nav-num">03</span
+                ><span class="nav-text">PRODUCTS</span></a
+              >
+            </li>
+            <li>
+              <a href="#collection-section" class="drawer-link drawer-nav"
+                ><span class="nav-num">04</span
+                ><span class="nav-text">PERFORMANCE</span></a
+              >
+            </li>
+            <li>
+              <a href="#story-section" class="drawer-link drawer-nav"
+                ><span class="nav-num">05</span
+                ><span class="nav-text">OUR STORY</span></a
+              >
+            </li>
+            <li>
+              <a href="#contact-section" class="drawer-link drawer-nav"
+                ><span class="nav-num">06</span
+                ><span class="nav-text">CONTACT</span></a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="drawer-footer">
+        <div class="drawer-brand-tag">JUST KEEP GOING.</div>
+        <div class="drawer-category-info">
+          Indian Sportswear for Men, Women &amp; Kids
+        </div>
+        <button class="btn-primary-neon trigger-enquire drawer-enquire-btn">
+          ENQUIRE NOW &rarr;
+        </button>
+      </div>
+    </aside>
+
+    <!-- ==========================================
+       SECTION 1: HERO EXPERIENCE
+       ========================================== -->
+    <section class="hero-section" id="hero">
+      <div class="hero-bg-media">
+        <!-- <div class="hero-media-overlay"></div> -->
+      </div>
+
+      <div class="container-fluid hero-content m-lr-60">
+        <div class="hero-brand-badge">
+          <span class="badge-tag">INDIAN SPORTSWEAR</span>
+          <span class="badge-sep">&bull;</span>
+          <span class="badge-audience">MEN &bull; WOMEN &bull; KIDS</span>
+        </div>
+
+        <h1 class="hero-title speed-hero-title" aria-label="JUST KEEP GOING">
+          <svg
+            class="speed-badge-svg"
+            viewBox="0 0 690 310"
+            xmlns="http://www.w3.org/2000/svg"
+            role="img"
+            aria-label="JUST KEEP GOING"
+          >
+            <defs>
+              <style>
+                @import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@1,900&display=swap");
+                .badge-text {
+                  font-family: "Kanit", sans-serif;
+                  font-weight: 900;
+                  font-style: italic;
+                  text-transform: uppercase;
+                }
+              </style>
+            </defs>
+
+            <!-- Main Skewed Lockup Group (-15deg Slant) -->
+            <g transform="translate(10, 5) skewX(-15)">
+              <!-- LEFT WHITE SPEED SPIKES (ATTACHED DIRECTLY TO LEFT TEXT EDGE x=200) -->
+              <g fill="#FFFFFF">
+                <polygon points="200,48 70,52 200,58" opacity="0.85" />
+                <polygon points="200,76 20,83 200,90" opacity="0.95" />
+                <polygon points="200,106 90,111 200,116" opacity="0.75" />
+                <polygon points="200,134 10,142 200,150" opacity="0.95" />
+                <polygon points="200,166 80,171 200,176" opacity="0.8" />
+                <polygon points="200,194 30,202 200,210" opacity="0.9" />
+                <polygon points="200,226 100,230 200,235" opacity="0.7" />
+                <polygon points="200,254 45,260 200,266" opacity="0.85" />
+              </g>
+
+              <!-- RIGHT PRIMARY RED SPEED SPIKES (FLUSH ALIGNED TO RIGHT JUSTIFIED EDGE x=458) -->
+              <g fill="#d61f16">
+                <polygon points="458,48 580,52 458,58" />
+                <polygon points="458,76 660,83 458,90" />
+                <polygon points="458,106 560,111 458,116" />
+                <polygon points="458,134 680,142 458,150" />
+                <polygon points="458,166 590,171 458,176" />
+                <polygon points="458,194 650,202 458,210" />
+                <polygon points="458,226 550,230 458,235" />
+                <polygon points="458,254 630,260 458,266" />
+              </g>
+
+              <!-- FULL-WIDTH JUSTIFIED TEXT STACK -->
+              <text
+                x="205"
+                y="116"
+                class="badge-text"
+                font-size="86"
+                fill="#FFFFFF"
+                textLength="250"
+                lengthAdjust="spacingAndGlyphs"
+              >
+                JUST
+              </text>
+              <text
+                x="205"
+                y="196"
+                class="badge-text"
+                font-size="86"
+                fill="#d61f16"
+                textLength="250"
+                lengthAdjust="spacingAndGlyphs"
+              >
+                KEEP
+              </text>
+              <text
+                x="205"
+                y="276"
+                class="badge-text"
+                font-size="86"
+                fill="#FFFFFF"
+                textLength="250"
+                lengthAdjust="spacingAndGlyphs"
+              >
+                GOING
+              </text>
+            </g>
+          </svg>
+        </h1>
+
+        <div class="hero-subtext">
+          <span>DESIGNED FOR MOVEMENT.</span>
+          <span class="highlight">MADE IN INDIA.</span>
+          <span>READY FOR EVERYWHERE.</span>
+        </div>
+
+        <div class="hero-cta-group">
+          <a href="#products-section" class="btn-primary-neon">
+            EXPLORE TRIFLEX &rarr;
+          </a>
+          <a href="#movement-section" class="btn-ghost">
+            DISCOVER THE MOVEMENT &rarr;
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-scroll-indicator" aria-hidden="true">
+        <div class="mouse-icon">
+          <div class="mouse-dot"></div>
+        </div>
+        <span>SCROLL TO MOVE</span>
+      </div>
+    </section>
+
+    <!-- ==========================================
+       SECTION 2: THE MOVEMENT
+       ========================================== -->
+    <section class="movement-section" id="movement-section">
+      <div class="container">
+        <span class="section-tagline">THE MOVEMENT</span>
+        <h2 class="section-headline" style="display: none">THE MOVEMENT</h2>
+
+        <div class="movement-grid">
+          <!-- Card 1: MOVE -->
+          <div class="movement-card">
+            <div
+              class="movement-card-bg"
+              style="
+                background-image: url(&quot;images/feat-everyday.png&quot;);
+              "
+            ></div>
+            <div class="movement-card-overlay"></div>
+            <div class="movement-card-content">
+              <h3 class="movement-title">
+                MOVE<span class="dot-accent">.</span>
+              </h3>
+              <p class="movement-desc">Every move makes you better.</p>
+            </div>
+          </div>
+
+          <!-- Card 2: TRAIN -->
+          <div class="movement-card">
+            <div
+              class="movement-card-bg"
+              style="
+                background-image: url(&quot;images/feat-training.png&quot;);
+              "
+            ></div>
+            <div class="movement-card-overlay"></div>
+            <div class="movement-card-content">
+              <h3 class="movement-title">
+                TRAIN<span class="dot-accent">.</span>
+              </h3>
+              <p class="movement-desc">Discipline today, strength tomorrow.</p>
+            </div>
+          </div>
+
+          <!-- Card 3: RUN -->
+          <div class="movement-card">
+            <div
+              class="movement-card-bg"
+              style="background-image: url(&quot;images/feat-running.png&quot;)"
+            ></div>
+            <div class="movement-card-overlay"></div>
+            <div class="movement-card-content">
+              <h3 class="movement-title">
+                RUN<span class="dot-accent">.</span>
+              </h3>
+              <p class="movement-desc">Further than yesterday.</p>
+            </div>
+          </div>
+
+          <!-- Card 4: PLAY -->
+          <div class="movement-card">
+            <div
+              class="movement-card-bg"
+              style="background-image: url(&quot;images/feat-gym.png&quot;)"
+            ></div>
+            <div class="movement-card-overlay"></div>
+            <div class="movement-card-content">
+              <h3 class="movement-title">
+                PLAY<span class="dot-accent">.</span>
+              </h3>
+              <p class="movement-desc">Play hard. Have fun.</p>
+            </div>
+          </div>
+
+          <!-- Card 5: LIVE -->
+          <div class="movement-card">
+            <div
+              class="movement-card-bg"
+              style="background-image: url(&quot;images/feat-cycling.png&quot;)"
+            ></div>
+            <div class="movement-card-overlay"></div>
+            <div class="movement-card-content">
+              <h3 class="movement-title">
+                LIVE<span class="dot-accent">.</span>
+              </h3>
+              <p class="movement-desc">This is your movement.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+       SECTION 3: COLLECTION (MADE FOR EVERY MOVE)
+       ========================================== -->
+    <section class="collection-section" id="collection-section">
+      <div class="container">
+        <div class="collection-header">
+          <div>
+            <span class="section-tagline">COLLECTION</span>
+            <h2 class="section-headline">
+              MADE FOR EVERY MOVE<span class="dot-accent">.</span>
+            </h2>
+          </div>
+          <a href="#products-section" class="arrow-link"
+            >VIEW ALL COLLECTIONS &rarr;</a
+          >
+        </div>
+
+        <div class="collection-grid">
+          <!-- Card 1: MEN -->
+          <div class="collection-card">
+            <div
+              class="collection-card-bg"
+              style="background-image: url(&quot;images/cat-tshirt.png&quot;)"
+            ></div>
+            <div class="collection-card-overlay"></div>
+            <div class="collection-card-content">
+              <h3 class="collection-card-title">MEN</h3>
+              <p class="collection-card-sub">POWER IN MOTION</p>
+              <a href="#products-section" class="arrow-link">EXPLORE &rarr;</a>
+            </div>
+          </div>
+
+          <!-- Card 2: WOMEN -->
+          <div class="collection-card">
+            <div
+              class="collection-card-bg"
+              style="background-image: url(&quot;images/cat-shorts.png&quot;)"
+            ></div>
+            <div class="collection-card-overlay"></div>
+            <div class="collection-card-content">
+              <h3 class="collection-card-title">WOMEN</h3>
+              <p class="collection-card-sub">MOVE YOUR WAY</p>
+              <a href="#products-section" class="arrow-link">EXPLORE &rarr;</a>
+            </div>
+          </div>
+
+          <!-- Card 3: KIDS -->
+          <div class="collection-card">
+            <div
+              class="collection-card-bg"
+              style="
+                background-image: url(&quot;images/cat-trackpant.png&quot;);
+              "
+            ></div>
+            <div class="collection-card-overlay"></div>
+            <div class="collection-card-content">
+              <h3 class="collection-card-title">KIDS</h3>
+              <p class="collection-card-sub">BORN TO MOVE</p>
+              <a href="#products-section" class="arrow-link">EXPLORE &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+       SECTION 4: OUR PRODUCTS / DISCOVER THE COLLECTION
+       ========================================== -->
+    <section class="products-section" id="products-section">
+      <div class="container">
+        <span class="section-tagline">OUR PRODUCTS</span>
+        <h2 class="section-headline">DISCOVER THE COLLECTION</h2>
+
+        <!-- Filter Pills -->
+        <div class="products-filter-row">
+          <button class="filter-tab active" data-filter="all">ALL</button>
+          <button class="filter-tab" data-filter="tops">TOPS</button>
+          <button class="filter-tab" data-filter="bottoms">BOTTOMS</button>
+          <button class="filter-tab" data-filter="jackets">JACKETS</button>
+          <button class="filter-tab" data-filter="accessories">
+            ACCESSORIES
+          </button>
+        </div>
+
+        <div class="products-main-layout">
+          <!-- Main Featured Product Card -->
+          <div class="featured-product-card" data-category="tops">
+            <div
+              class="featured-prod-bg"
+              style="background-image: url(&quot;images/prod-1.png&quot;)"
+            ></div>
+            <div class="featured-prod-content">
+              <span class="prod-code-tag">TRIFLEX / 014</span>
+              <h3 class="featured-prod-title">PERFORMANCE TEE</h3>
+              <p class="featured-prod-sub">MADE TO MOVE</p>
+              <a href="#spotlight-card" class="arrow-link">EXPLORE &rarr;</a>
+            </div>
+          </div>
+
+          <!-- 2x2 Product Cards Grid -->
+          <div class="products-grid-2x2">
+            <div class="prod-card-small" data-category="tops">
+              <div
+                class="prod-card-img"
+                style="background-image: url(&quot;images/prod-2.png&quot;)"
+              ></div>
+              <div class="prod-card-content">
+                <h4 class="prod-card-title">ACTIVE WEAVE TOP</h4>
+                <a
+                  href="#spotlight-card"
+                  class="arrow-link"
+                  style="font-size: 0.7rem"
+                  >EXPLORE &rarr;</a
+                >
+              </div>
+            </div>
+
+            <div class="prod-card-small" data-category="jackets">
+              <div
+                class="prod-card-img"
+                style="background-image: url(&quot;images/prod-3.png&quot;)"
+              ></div>
+              <div class="prod-card-content">
+                <h4 class="prod-card-title">STEALTH ZIP JACKET</h4>
+                <a
+                  href="#spotlight-card"
+                  class="arrow-link"
+                  style="font-size: 0.7rem"
+                  >EXPLORE &rarr;</a
+                >
+              </div>
+            </div>
+
+            <div class="prod-card-small" data-category="tops">
+              <div
+                class="prod-card-img"
+                style="background-image: url(&quot;images/prod-4.png&quot;)"
+              ></div>
+              <div class="prod-card-content">
+                <h4 class="prod-card-title">PERFORMANCE POLO</h4>
+                <a
+                  href="#spotlight-card"
+                  class="arrow-link"
+                  style="font-size: 0.7rem"
+                  >EXPLORE &rarr;</a
+                >
+              </div>
+            </div>
+
+            <div class="prod-card-small" data-category="bottoms">
+              <div
+                class="prod-card-img"
+                style="background-image: url(&quot;images/prod-5.png&quot;)"
+              ></div>
+              <div class="prod-card-content">
+                <h4 class="prod-card-title">AGILITY LYCRA SHORTS</h4>
+                <a
+                  href="#spotlight-card"
+                  class="arrow-link"
+                  style="font-size: 0.7rem"
+                  >EXPLORE &rarr;</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top: 40px; text-align: center">
+          <a href="#spotlight-card" class="arrow-link"
+            >VIEW ALL PRODUCTS &rarr;</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+       SECTION 5: INTERACTIVE SPOTLIGHT CARD (TRIFLEX / 014 PERFORMANCE TEE)
+       ========================================== -->
+    <section class="spotlight-section" id="spotlight-card">
+      <div class="container">
+        <div class="spotlight-card">
+          <div class="spotlight-header">
+            <div class="spotlight-code">TRIFLEX / 014</div>
+            <h2 class="spotlight-title">PERFORMANCE TEE</h2>
+          </div>
+
+          <!-- 5 Feature Badges Row -->
+          <div class="tech-badges-row">
+            <div class="tech-badge-item"><span>🪶</span> LIGHTWEIGHT</div>
+            <div class="tech-badge-item"><span>💨</span> BREATHABLE</div>
+            <div class="tech-badge-item"><span>🌀</span> FLEXIBLE</div>
+            <div class="tech-badge-item"><span>💧</span> QUICK DRY</div>
+            <div class="tech-badge-item"><span>🤍</span> COMFORT</div>
+          </div>
+
+          <!-- Product Image Showcase Carousel -->
+          <div class="spotlight-carousel-stage">
+            <button
+              class="carousel-nav-btn prev"
+              id="carousel-prev"
+              aria-label="Previous Image"
+            >
+              &larr;
+            </button>
+            <img
+              src="images/prod-1.png"
+              alt="Performance Tee Black"
+              id="spotlight-img"
+              class="spotlight-prod-img"
+            />
+            <button
+              class="carousel-nav-btn next"
+              id="carousel-next"
+              aria-label="Next Image"
+            >
+              &rarr;
+            </button>
+
+            <div class="carousel-dots" id="carousel-dots">
+              <span class="dot-item active" data-index="0"></span>
+              <span class="dot-item" data-index="1"></span>
+              <span class="dot-item" data-index="2"></span>
+              <span class="dot-item" data-index="3"></span>
+            </div>
+          </div>
+
+          <!-- Interactive Color & Size Selector -->
+          <div class="spotlight-controls">
+            <!-- Color Swatches -->
+            <div class="control-group">
+              <span class="control-label">COLOR:</span>
+              <div class="color-swatches">
+                <span
+                  class="swatch-circle swatch-black active"
+                  data-color="black"
+                  title="Black"
+                ></span>
+                <span
+                  class="swatch-circle swatch-white"
+                  data-color="white"
+                  title="White"
+                ></span>
+                <span
+                  class="swatch-circle swatch-grey"
+                  data-color="grey"
+                  title="Charcoal"
+                ></span>
+                <span
+                  class="swatch-circle swatch-neon"
+                  data-color="neon"
+                  title="Crimson Red"
+                ></span>
+              </div>
+            </div>
+
+            <!-- Size Selector -->
+            <div class="control-group">
+              <span class="control-label">SIZE:</span>
+              <div class="size-pills">
+                <button class="size-pill" data-size="S">S</button>
+                <button class="size-pill active" data-size="M">M</button>
+                <button class="size-pill" data-size="L">L</button>
+                <button class="size-pill" data-size="XL">XL</button>
+                <button class="size-pill" data-size="XXL">XXL</button>
+              </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="spotlight-actions">
+              <button class="btn-primary-neon trigger-enquire">
+                ENQUIRE NOW &rarr;
+              </button>
+              <button class="btn-ghost trigger-enquire">VIEW DETAILS 👁</button>
+            </div>
+
+            <button
+              class="arrow-link"
+              style="font-size: 0.75rem; color: var(--text-grey)"
+              onclick="
+                navigator.clipboard.writeText(window.location.href);
+                alert('Product details copied to clipboard!');
+              "
+            >
+              SHARE 🔗
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+       SECTION 6: PERFORMANCE (ENGINEERED FOR MOVEMENT)
+       ========================================== -->
+    <section class="performance-section" id="performance">
+      <div class="container">
+        <span class="section-tagline">PERFORMANCE</span>
+        <h2 class="section-headline">
+          ENGINEERED FOR MOVEMENT<span class="dot-accent">.</span>
+        </h2>
+
+        <div class="performance-grid">
+          <div class="performance-column">
+            <div
+              class="perf-col-bg"
+              style="background-image: url(&quot;images/feat-gym.png&quot;)"
+            ></div>
+            <div class="perf-col-content">
+              <h3 class="perf-col-title">FABRIC</h3>
+              <p class="perf-col-desc">Advanced performance materials</p>
+            </div>
+          </div>
+
+          <div class="performance-column">
+            <div
+              class="perf-col-bg"
+              style="
+                background-image: url(&quot;images/feat-training.png&quot;);
+              "
+            ></div>
+            <div class="perf-col-content">
+              <h3 class="perf-col-title">TEXTURE</h3>
+              <p class="perf-col-desc">Designed for comfort & durability</p>
+            </div>
+          </div>
+
+          <div class="performance-column">
+            <div
+              class="perf-col-bg"
+              style="background-image: url(&quot;images/feat-running.png&quot;)"
+            ></div>
+            <div class="perf-col-content">
+              <h3 class="perf-col-title">GARMENT</h3>
+              <p class="perf-col-desc">Precision craftsmanship</p>
+            </div>
+          </div>
+
+          <div class="performance-column">
+            <div
+              class="perf-col-bg"
+              style="background-image: url(&quot;images/banner-move.png&quot;)"
+            ></div>
+            <div class="perf-col-content">
+              <h3 class="perf-col-title">ATHLETE</h3>
+              <p class="perf-col-desc">Tested by athletes</p>
+            </div>
+          </div>
+
+          <div class="performance-column">
+            <div
+              class="perf-col-bg"
+              style="background-image: url(&quot;images/feat-cycling.png&quot;)"
+            ></div>
+            <div class="perf-col-content">
+              <h3 class="perf-col-title">MOVEMENT</h3>
+              <p class="perf-col-desc">Built for how you move</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Icon Feature Bar -->
+        <div class="perf-bottom-bar">
+          <div class="tech-badge-item"><span>🪶</span> LIGHTWEIGHT</div>
+          <div class="tech-badge-item"><span>💨</span> BREATHABLE</div>
+          <div class="tech-badge-item"><span>🌀</span> FLEXIBLE</div>
+          <div class="tech-badge-item"><span>💧</span> QUICK DRY</div>
+          <div class="tech-badge-item"><span>🤍</span> COMFORT</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+       SECTION 7: OUR STORY (WE MOVE WITH YOU)
+       ========================================== -->
+    <section class="story-section" id="story-section">
+      <div class="container">
+        <div class="story-header">
+          <span class="section-tagline">OUR STORY</span>
+          <h2 class="section-headline">
+            WE MOVE WITH YOU<span class="dot-accent">.</span>
+          </h2>
+          <p class="story-quote">
+            Every day starts with a move. Whatever your move is, we are with you
+            in it. In every step. In every set. In every moment.
+          </p>
+          <a href="#contact-section" class="arrow-link">OUR JOURNEY &rarr;</a>
+        </div>
+
+        <div class="story-lifestyle-strip">
+          <div class="story-strip-item">
+            <div
+              class="story-strip-bg"
+              style="background-image: url(&quot;images/banner-2.png&quot;)"
+            ></div>
+            <div class="story-strip-text">Every day starts with a move.</div>
+          </div>
+
+          <div class="story-strip-item">
+            <div
+              class="story-strip-bg"
+              style="background-image: url(&quot;images/feat-running.png&quot;)"
+            ></div>
+            <div class="story-strip-text">You run.</div>
+          </div>
+
+          <div class="story-strip-item">
+            <div
+              class="story-strip-bg"
+              style="background-image: url(&quot;images/cat-tshirt.png&quot;)"
+            ></div>
+            <div class="story-strip-text">You work.</div>
+          </div>
+
+          <div class="story-strip-item">
+            <div
+              class="story-strip-bg"
+              style="background-image: url(&quot;images/banner-move.png&quot;)"
+            ></div>
+            <div class="story-strip-text">You travel.</div>
+          </div>
+
+          <div class="story-strip-item">
+            <div
+              class="story-strip-bg"
+              style="background-image: url(&quot;images/feat-cycling.png&quot;)"
+            ></div>
+            <div class="story-strip-text">You play. You live.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+       SECTION 8: MADE IN INDIA (MADE HERE)
+       ========================================== -->
+    <section class="craft-section" id="craft-section">
+      <div class="container">
+        <div class="craft-header-row">
+          <div>
+            <span class="section-tagline">MADE IN INDIA</span>
+            <h2 class="section-headline">
+              MADE HERE<span class="dot-accent">.</span>
+            </h2>
+            <p
+              style="
+                color: var(--text-grey);
+                font-size: 0.95rem;
+                margin-top: 8px;
+              "
+            >
+              Designed for movement. Made in India. Ready for everywhere.
+            </p>
+          </div>
+          <a href="#contact-section" class="arrow-link"
+            >SEE OUR PROCESS &rarr;</a
+          >
+        </div>
+
+        <div class="craft-grid">
+          <div class="craft-card">
+            <div
+              class="craft-card-bg"
+              style="
+                background-image: url(&quot;images/banner-dealer.png&quot;);
+              "
+            ></div>
+          </div>
+          <div class="craft-card">
+            <div
+              class="craft-card-bg"
+              style="
+                background-image: url(&quot;images/feat-training.png&quot;);
+              "
+            ></div>
+          </div>
+          <div class="craft-card">
+            <div
+              class="craft-card-bg"
+              style="background-image: url(&quot;images/cat-polo.png&quot;)"
+            ></div>
+          </div>
+          <div class="craft-card">
+            <div
+              class="craft-card-bg"
+              style="
+                background-image: url(&quot;images/cat-cargopant.png&quot;);
+              "
+            ></div>
+          </div>
+          <div class="craft-card">
+            <div
+              class="craft-card-bg"
+              style="background-image: url(&quot;images/feat-gym.png&quot;)"
+            ></div>
+          </div>
+          <div class="craft-card">
+            <div
+              class="craft-card-bg"
+              style="background-image: url(&quot;images/prod-4.png&quot;)"
+            ></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+       SECTION 9: ATHLETES SPEAK
+       ========================================== -->
+    <section class="athletes-section" id="athletes">
+      <div class="container">
+        <span class="section-tagline">ATHLETES SPEAK</span>
+        <h2 class="section-headline">
+          REAL PEOPLE. REAL MOVES<span class="dot-accent">.</span>
+        </h2>
+
+        <div class="athletes-grid">
+          <!-- Card 1 -->
+          <div class="athlete-card">
+            <img
+              src="images/banner-1.png"
+              alt="Namish Yadav"
+              class="athlete-photo"
+            />
+            <p class="athlete-quote-text">
+              "Triflex gives me the confidence to push every limit."
+            </p>
+            <div class="athlete-meta">
+              <h4 class="athlete-name">NAMISH YADAV</h4>
+              <span class="athlete-role">NATIONAL SPRINTER</span>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="athlete-card">
+            <img
+              src="images/prod-2.png"
+              alt="Ananya Sharma"
+              class="athlete-photo"
+            />
+            <p class="athlete-quote-text">
+              "Comfort, style and performance in one."
+            </p>
+            <div class="athlete-meta">
+              <h4 class="athlete-name">ANANYA SHARMA</h4>
+              <span class="athlete-role">FITNESS COACH</span>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="athlete-card">
+            <img
+              src="images/feat-running.png"
+              alt="Arjun Mehta"
+              class="athlete-photo"
+            />
+            <p class="athlete-quote-text">
+              "Built for kids who never stop moving."
+            </p>
+            <div class="athlete-meta">
+              <h4 class="athlete-name">ARJUN MEHTA</h4>
+              <span class="athlete-role">YOUNG ATHLETE</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+       SECTION 10: FAQ & ENQUIRE
+       ========================================== -->
+    <section class="contact-faq-section" id="contact-section">
+      <div class="container">
+        <div class="contact-faq-grid">
+          <!-- FAQ Column -->
+          <div>
+            <span class="section-tagline">FAQ</span>
+            <h2 class="section-headline">
+              QUESTIONS?<br />WE'VE GOT ANSWERS<span class="dot-accent">.</span>
+            </h2>
+
+            <div class="faq-list">
+              <div class="faq-item">
+                <button class="faq-question">
+                  <span>Where is Triflex made?</span>
+                  <span class="faq-toggle-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                  All Triflex products are proudly designed and manufactured in
+                  India using precision textile technology and high-density
+                  performance fabrics.
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <button class="faq-question">
+                  <span>What products do you offer?</span>
+                  <span class="faq-toggle-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                  We offer premium dry-fit t-shirts, lycra shorts, track pants,
+                  tech polos, hoodies, joggers, and athletic accessories
+                  designed for high-intensity movement.
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <button class="faq-question">
+                  <span>What materials do you use?</span>
+                  <span class="faq-toggle-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                  We utilize hydrophobic nano-dry micro-polyester, elastomeric
+                  4-way lycra stretch, and lightweight thermo-ventilated mesh
+                  compounds.
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <button class="faq-question">
+                  <span>How do I choose my size?</span>
+                  <span class="faq-toggle-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                  Our apparel features an ergonomic athletic fit. If you prefer
+                  a relaxed fit, we recommend selecting one size larger than
+                  your standard size.
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <button class="faq-question">
+                  <span>Do you accept bulk orders?</span>
+                  <span class="faq-toggle-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                  Yes! We support custom team gear, sports academy uniforms,
+                  corporate wellness apparel, and bulk wholesale orders with
+                  custom branding.
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <button class="faq-question">
+                  <span>Do you work with distributors?</span>
+                  <span class="faq-toggle-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                  We partner with select retail store owners, gym chains, and
+                  regional sportswear distributors across India. Submit a
+                  distributor inquiry to partner.
+                </div>
+              </div>
+            </div>
+
+            <p
+              style="
+                margin-top: 24px;
+                font-size: 0.85rem;
+                color: var(--text-grey);
+              "
+            >
+              More questions?
+              <a
+                href="mailto:hello@triflex.in"
+                style="color: var(--accent-neon); text-decoration: underline"
+                >Contact us.</a
+              >
+            </p>
+          </div>
+
+          <!-- Enquire Box -->
+          <div class="enquire-card">
+            <div
+              class="enquire-bg-image"
+              style="
+                background-image: url(&quot;images/feat-training.png&quot;);
+              "
+            ></div>
+
+            <div>
+              <span class="section-tagline">ENQUIRE</span>
+              <h2 class="section-headline">
+                LET'S CONNECT.<br />WE'D LOVE TO HEAR YOU<span
+                  class="dot-accent"
+                  >.</span
+                >
+              </h2>
+            </div>
+
+            <div class="contact-handles-list">
+              <div class="contact-handle-item">
+                <div class="handle-icon-box">💬</div>
+                <div>
+                  <div class="handle-label">WHATSAPP</div>
+                  <div class="handle-value">+91 98765 43210</div>
+                </div>
+              </div>
+
+              <div class="contact-handle-item">
+                <div class="handle-icon-box">📞</div>
+                <div>
+                  <div class="handle-label">PHONE</div>
+                  <div class="handle-value">+91 22 1234 5678</div>
+                </div>
+              </div>
+
+              <div class="contact-handle-item">
+                <div class="handle-icon-box">✉️</div>
+                <div>
+                  <div class="handle-label">EMAIL</div>
+                  <div class="handle-value">hello@triflex.in</div>
+                </div>
+              </div>
+
+              <div class="contact-handle-item">
+                <div class="handle-icon-box">📦</div>
+                <div>
+                  <div class="handle-label">BULK ENQUIRY</div>
+                  <div class="handle-value">For teams & organizations</div>
+                </div>
+              </div>
+
+              <div class="contact-handle-item">
+                <div class="handle-icon-box">🤝</div>
+                <div>
+                  <div class="handle-label">DISTRIBUTOR ENQUIRY</div>
+                  <div class="handle-value">Join the Triflex movement</div>
+                </div>
+              </div>
+            </div>
+
+            <button
+              class="btn-primary-neon trigger-enquire"
+              style="width: 100%; justify-content: center"
+            >
+              SEND DIRECT ENQUIRY &rarr;
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+       SECTION 11: FOOTER
+       ========================================== -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-top">
+          <div>
+            <img
+              src="assets/main/triflex-emblem-white.png"
+              alt="TRIFLEX Logo"
+              class="footer-logo-img"
+            />
+            <div class="footer-tagline">JUST KEEP GOING.</div>
+          </div>
+
+          <ul class="footer-links">
+            <li>
+              <a href="#collection-section" class="footer-link">COLLECTION</a>
+            </li>
+            <li>
+              <a href="#movement-section" class="footer-link">MOVEMENT</a>
+            </li>
+            <li>
+              <a href="#products-section" class="footer-link">PRODUCTS</a>
+            </li>
+            <li><a href="#story-section" class="footer-link">STORY</a></li>
+            <li><a href="#contact-section" class="footer-link">CONTACT</a></li>
+          </ul>
+
+          <div>
+            <div
+              style="
+                font-family: var(--font-accent);
+                font-size: 0.7rem;
+                letter-spacing: 2px;
+                color: var(--text-grey);
+                margin-bottom: 12px;
+              "
+            >
+              FOLLOW US
+            </div>
+            <div class="social-links">
+              <a
+                href="https://instagram.com"
+                target="_blank"
+                class="social-icon-btn"
+                aria-label="Instagram"
+              >
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                </svg>
+              </a>
+              <a
+                href="https://youtube.com"
+                target="_blank"
+                class="social-icon-btn"
+                aria-label="YouTube"
+              >
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"
+                  />
+                  <polygon
+                    points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"
+                  />
+                </svg>
+              </a>
+              <a
+                href="https://facebook.com"
+                target="_blank"
+                class="social-icon-btn"
+                aria-label="Facebook"
+              >
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div>&copy; 2024 TRIFLEX. ALL RIGHTS RESERVED.</div>
+          <div class="footer-legal">
+            <a href="#">PRIVACY POLICY</a>
+            <a href="#">TERMS & CONDITIONS</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ==========================================
+       INQUIRY MODAL DIALOG
+       ========================================== -->
+    <div class="modal-overlay" id="inquiry-modal">
+      <div class="modal-box">
+        <button class="modal-close" id="modal-close-btn">&times;</button>
+        <span class="section-tagline">LET'S CONNECT</span>
+        <h3
+          style="
+            font-family: var(--font-display);
+            font-size: 2.2rem;
+            margin-top: 4px;
+          "
+        >
+          TRIFLEX INQUIRY
+        </h3>
+
+        <form
+          class="modal-form"
+          id="inquiry-form"
+          onsubmit="
+            event.preventDefault();
+            alert(
+              'Thank you for reaching out to TRIFLEX. Our team will contact you shortly!',
+            );
+            document.getElementById('inquiry-modal').classList.remove('open');
+          "
+        >
+          <div class="form-group">
+            <input type="text" placeholder="Your Full Name" required />
+          </div>
+          <div class="form-group">
+            <input type="email" placeholder="Your Email Address" required />
+          </div>
+          <div class="form-group">
+            <input type="tel" placeholder="Phone / WhatsApp Number" required />
+          </div>
+          <div class="form-group">
+            <select required style="color: var(--text-white)">
+              <option value="" disabled selected>Select Inquiry Type</option>
+              <option value="retail">Individual Product Inquiry</option>
+              <option value="bulk">Bulk / Team Orders</option>
+              <option value="distributor">Distributor Partnership</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <textarea
+              rows="4"
+              placeholder="Your Message / Requirements..."
+            ></textarea>
+          </div>
+          <button
+            type="submit"
+            class="btn-primary-neon"
+            style="width: 100%; justify-content: center"
+          >
+            SUBMIT INQUIRY &rarr;
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Master Script -->
+    <script src="js/main.js"></script>
+  </body>
+</html>

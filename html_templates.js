@@ -1,0 +1,460 @@
+const fs = require('fs');
+
+function getHeaderHTML(activeNav = '') {
+  return `
+  <!-- TOP WHOLESALE ANNOUNCEMENT BAR (SCROLLABLE TICKER VIEW) -->
+  <div class="wholesale-announcement-bar" role="region" aria-label="Wholesale Supply Highlights">
+    <div class="announcement-scroll-view" tabindex="0" title="Swipe or drag to scroll wholesale updates">
+      <div class="announcement-track css-marquee">
+        <div class="announcement-group">
+          <span class="ticker-item">DIRECT FACTORY &amp; WHOLESALE SUPPLY</span>
+          <span class="ticker-sep" aria-hidden="true">&bull;</span>
+          <span class="ticker-item announcement-highlight">LOW MOQ FOR RETAILERS &amp; BRANDS</span>
+          <span class="ticker-sep" aria-hidden="true">&bull;</span>
+          <span class="ticker-item">24–48H PAN-INDIA &amp; GLOBAL AIR DISPATCH</span>
+          <span class="ticker-sep" aria-hidden="true">&bull;</span>
+          <span class="ticker-item">CUSTOM OEM &amp; PRIVATE LABEL CAPABILITY</span>
+          <span class="ticker-sep" aria-hidden="true">&bull;</span>
+        </div>
+        <div class="announcement-group" aria-hidden="true">
+          <span class="ticker-item">DIRECT FACTORY &amp; WHOLESALE SUPPLY</span>
+          <span class="ticker-sep" aria-hidden="true">&bull;</span>
+          <span class="ticker-item announcement-highlight">LOW MOQ FOR RETAILERS &amp; BRANDS</span>
+          <span class="ticker-sep" aria-hidden="true">&bull;</span>
+          <span class="ticker-item">24–48H PAN-INDIA &amp; GLOBAL AIR DISPATCH</span>
+          <span class="ticker-sep" aria-hidden="true">&bull;</span>
+          <span class="ticker-item">CUSTOM OEM &amp; PRIVATE LABEL CAPABILITY</span>
+          <span class="ticker-sep" aria-hidden="true">&bull;</span>
+        </div>
+        <div class="announcement-group" aria-hidden="true">
+          <span class="ticker-item">DIRECT FACTORY &amp; WHOLESALE SUPPLY</span>
+          <span class="ticker-sep" aria-hidden="true">&bull;</span>
+          <span class="ticker-item announcement-highlight">LOW MOQ FOR RETAILERS &amp; BRANDS</span>
+          <span class="ticker-sep" aria-hidden="true">&bull;</span>
+          <span class="ticker-item">24–48H PAN-INDIA &amp; GLOBAL AIR DISPATCH</span>
+          <span class="ticker-sep" aria-hidden="true">&bull;</span>
+          <span class="ticker-item">CUSTOM OEM &amp; PRIVATE LABEL CAPABILITY</span>
+          <span class="ticker-sep" aria-hidden="true">&bull;</span>
+        </div>
+        <div class="announcement-group" aria-hidden="true">
+          <span class="ticker-item">DIRECT FACTORY &amp; WHOLESALE SUPPLY</span>
+          <span class="ticker-sep" aria-hidden="true">&bull;</span>
+          <span class="ticker-item announcement-highlight">LOW MOQ FOR RETAILERS &amp; BRANDS</span>
+          <span class="ticker-sep" aria-hidden="true">&bull;</span>
+          <span class="ticker-item">24–48H PAN-INDIA &amp; GLOBAL AIR DISPATCH</span>
+          <span class="ticker-sep" aria-hidden="true">&bull;</span>
+          <span class="ticker-item">CUSTOM OEM &amp; PRIVATE LABEL CAPABILITY</span>
+          <span class="ticker-sep" aria-hidden="true">&bull;</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN HEADER -->
+  <header class="main-header" id="main-header">
+    <div class="container">
+      <div class="header-inner">
+        <!-- Horizontal Brand Logo (Emblem Left + Text Right) -->
+        <a href="index.html" class="brand-logo-wrap" aria-label="TRIFLEX Home">
+          <img src="images/triflex-emblem-dark.png" alt="TRIFLEX Emblem" class="brand-emblem-img">
+          <span class="brand-text-block">
+            <span class="brand-title-text">TRIFLEX</span>
+            <span class="brand-subtitle-tag">JUST KEEP GOING</span>
+          </span>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="desktop-nav-menu" aria-label="Primary Navigation">
+          <div class="nav-item-dropdown">
+            <a href="collection.html" class="nav-link ${activeNav === 'collection' ? 'active' : ''}">
+              COLLECTION ▾
+            </a>
+            <div class="mega-dropdown-menu">
+              <a href="collection.html" class="mega-dropdown-item">All Wholesale Lines</a>
+              <a href="men.html" class="mega-dropdown-item">Men's Performance</a>
+              <a href="women.html" class="mega-dropdown-item">Women's Sculpt Line</a>
+              <a href="kids.html" class="mega-dropdown-item">Junior Academy Line</a>
+              <a href="teamwear.html" class="mega-dropdown-item">Custom Teamwear</a>
+            </div>
+          </div>
+
+          <div class="nav-item-dropdown">
+            <a href="wholesale.html" class="nav-link ${activeNav === 'solutions' ? 'active' : ''}">
+              SOLUTIONS ▾
+            </a>
+            <div class="mega-dropdown-menu">
+              <a href="wholesale.html" class="mega-dropdown-item">Wholesale Supply</a>
+              <a href="private-label.html" class="mega-dropdown-item">Private Label (OEM)</a>
+              <a href="teamwear.html" class="mega-dropdown-item">Custom Teamwear</a>
+              <a href="manufacturing.html" class="mega-dropdown-item">Custom Manufacturing</a>
+            </div>
+          </div>
+
+          <a href="manufacturing.html" class="nav-link ${activeNav === 'manufacturing' ? 'active' : ''}">
+            MANUFACTURING
+          </a>
+
+          <a href="about.html" class="nav-link ${activeNav === 'about' ? 'active' : ''}">
+            ABOUT
+          </a>
+
+          <a href="contact.html" class="nav-link ${activeNav === 'contact' ? 'active' : ''}">
+            CONTACT
+          </a>
+        </nav>
+
+        <!-- Right Actions -->
+        <div class="header-right-actions">
+          <button type="button" class="search-trigger-btn" data-open-search aria-label="Search articles">
+            <span>🔍</span>
+            <span class="search-text-desktop">Search</span>
+            <span class="search-kbd">/</span>
+          </button>
+
+          <button type="button" class="enquiry-bag-btn" data-open-enquiry-drawer aria-label="View Enquiry Bag">
+            <span class="bag-text-desktop">ENQUIRY BAG</span>
+            <span class="bag-badge-count">0</span>
+          </button>
+
+          <button type="button" class="btn-primary btn-sm header-enquire-btn" data-open-rfq-modal>
+            <span>ENQUIRE</span>
+            <span>&rarr;</span>
+          </button>
+
+          <button type="button" class="mobile-menu-toggle" id="drawer-open-btn" aria-label="Open mobile menu">
+            ☰
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+  `;
+}
+
+function getModalsAndDrawersHTML() {
+  return `
+  <!-- SIDE DRAWER FOR ENQUIRY BAG -->
+  <div class="drawer-backdrop" id="drawer-backdrop"></div>
+  <aside class="enquiry-drawer" id="enquiry-drawer" aria-label="B2B Enquiry Bag">
+    <div class="drawer-header">
+      <div class="drawer-title-group">
+        <h3 style="font-family: var(--font-heading); font-size: 1.25rem; font-weight: 800; text-transform: uppercase; margin: 0; color: var(--brand-navy);">ENQUIRY BAG <span id="drawer-items-count" style="color: var(--brand-navy); background: var(--accent-lime); padding: 1px 6px; border-radius: 3px; font-size: 0.85rem;">0</span></h3>
+      </div>
+      <button type="button" class="drawer-close-btn" data-close-enquiry-drawer aria-label="Close Bag">&times;</button>
+    </div>
+
+    <div class="drawer-body" id="drawer-items-container">
+      <!-- Items dynamically populated via js/cart_manager.js -->
+    </div>
+
+    <div class="drawer-footer">
+      <div class="drawer-summary-row">
+        <span>Minimum Order (MOQ)</span>
+        <span style="color: var(--brand-navy); font-weight: 700;">Verified per Article</span>
+      </div>
+      <div class="drawer-summary-row total">
+        <span>Total Enquiry Units</span>
+        <span id="drawer-total-pieces" style="color: var(--brand-navy); font-weight: 800;">0 Pcs</span>
+      </div>
+      <button type="button" class="btn-primary" id="drawer-quote-btn" style="width: 100%;" data-open-rfq-modal>
+        <span>REQUEST WHOLESALE QUOTE</span>
+        <span class="btn-arrow">&rarr;</span>
+      </button>
+      <a href="cart.html" class="btn-secondary btn-sm" style="text-align: center;" onclick="window.bagManager.closeDrawer()">
+        REVIEW FULL RFQ SPEC SHEET
+      </a>
+    </div>
+  </aside>
+
+  <!-- MOBILE NAVIGATION DRAWER -->
+  <div class="drawer-backdrop" id="mobile-overlay"></div>
+  <aside class="enquiry-drawer" id="mobile-drawer" style="left: 0; right: auto; transform: translateX(-100%);">
+    <div class="drawer-header">
+      <a href="index.html" class="brand-logo-wrap" aria-label="TRIFLEX Home">
+        <img src="images/triflex-emblem-dark.png" alt="TRIFLEX Emblem" class="brand-emblem-img">
+        <span class="brand-text-block">
+          <span class="brand-title-text">TRIFLEX</span>
+          <span class="brand-subtitle-tag">JUST KEEP GOING</span>
+        </span>
+      </a>
+      <button type="button" class="drawer-close-btn" id="drawer-close-btn">&times;</button>
+    </div>
+    <div class="drawer-body">
+      <div style="font-family: var(--font-mono); font-size: 0.68rem; font-weight: 800; color: var(--brand-navy); background: var(--accent-lime); padding: 2px 8px; border-radius: 3px; width: fit-content; margin-bottom: 8px;">WHOLESALE SHOWROOM</div>
+      <a href="collection.html" class="mega-dropdown-item" style="font-size: 1rem; padding: 12px 0;">01 ALL COLLECTIONS</a>
+      <a href="men.html" class="mega-dropdown-item" style="font-size: 1rem; padding: 12px 0;">02 MEN'S PERFORMANCE</a>
+      <a href="women.html" class="mega-dropdown-item" style="font-size: 1rem; padding: 12px 0;">03 WOMEN'S SCULPT LINE</a>
+      <a href="kids.html" class="mega-dropdown-item" style="font-size: 1rem; padding: 12px 0;">04 JUNIOR ACADEMY LINE</a>
+      <a href="teamwear.html" class="mega-dropdown-item" style="font-size: 1rem; padding: 12px 0;">05 CUSTOM TEAMWEAR &amp; KITS</a>
+      
+      <div style="font-family: var(--font-mono); font-size: 0.68rem; font-weight: 800; color: var(--brand-navy); background: var(--accent-lime); padding: 2px 8px; border-radius: 3px; width: fit-content; margin: 20px 0 8px;">B2B SOLUTIONS</div>
+      <a href="wholesale.html" class="mega-dropdown-item" style="font-size: 1rem; padding: 12px 0;">06 WHOLESALE SUPPLY</a>
+      <a href="private-label.html" class="mega-dropdown-item" style="font-size: 1rem; padding: 12px 0;">07 PRIVATE LABEL (OEM)</a>
+      <a href="manufacturing.html" class="mega-dropdown-item" style="font-size: 1rem; padding: 12px 0;">08 MANUFACTURING SCALE</a>
+      <a href="about.html" class="mega-dropdown-item" style="font-size: 1rem; padding: 12px 0;">09 THE TRIFLEX MANIFESTO</a>
+      <a href="contact.html" class="mega-dropdown-item" style="font-size: 1rem; padding: 12px 0;">10 TRADE DESK &amp; HUBS</a>
+    </div>
+    <div class="drawer-footer">
+      <button type="button" class="btn-primary" style="width: 100%;" data-open-rfq-modal>
+        <span>LAUNCH WHOLESALE RFQ</span>
+        <span class="btn-arrow">&rarr;</span>
+      </button>
+    </div>
+  </aside>
+
+  <!-- SEARCH OVERLAY MODAL -->
+  <div class="modal-overlay" id="search-modal-overlay">
+    <div class="modal-container">
+      <div class="modal-header">
+        <div style="display: flex; align-items: center; gap: 10px; width: 100%;">
+          <span style="font-size: 1.2rem;">🔍</span>
+          <input type="text" id="search-modal-input" placeholder="Search by product code (TR-101), category, fabric, GSM..." style="width: 100%; background: none; border: none; font-size: 1.1rem; color: var(--text-primary); outline: none; font-family: var(--font-heading);">
+        </div>
+        <button type="button" class="drawer-close-btn search-modal-close" data-close-search>&times;</button>
+      </div>
+      <div class="modal-body" id="search-results-list">
+        <!-- Live search results -->
+      </div>
+    </div>
+  </div>
+
+  <!-- QUICK ORDER MODAL -->
+  <div class="modal-overlay" id="quick-order-modal-overlay">
+    <div class="modal-container">
+      <div class="modal-header">
+        <div>
+          <span class="eyebrow-badge" style="margin-bottom: 4px;">REPEAT WHOLESALE MATRIX</span>
+          <h3 style="font-family: var(--font-display); font-size: 1.4rem; text-transform: uppercase; margin: 0;">QUICK ORDER BY PRODUCT CODE</h3>
+        </div>
+        <button type="button" class="drawer-close-btn quick-order-modal-close" data-close-quick-order>&times;</button>
+      </div>
+      <div class="modal-body">
+        <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 16px;">
+          Direct matrix entry for verified product codes (e.g. <strong>TR-101</strong>, <strong>TR-201</strong>, <strong>TR-401</strong>). Specify bulk units and batch add to your enquiry bag.
+        </p>
+
+        <table class="quick-order-table">
+          <thead>
+            <tr>
+              <th style="width: 35%;">PRODUCT CODE</th>
+              <th style="width: 25%;">QUANTITY (PCS)</th>
+              <th style="width: 30%;">ARTICLE STATUS</th>
+              <th style="width: 10%;"></th>
+            </tr>
+          </thead>
+          <tbody id="quick-order-tbody">
+            <!-- Rows dynamically rendered -->
+          </tbody>
+        </table>
+
+        <datalist id="triflex-product-codes">
+          <option value="TR-101">TR-101 — AeroVent Pro Training Tee (Men)</option>
+          <option value="TR-102">TR-102 — HydroVent Tech Pique Polo (Men)</option>
+          <option value="TR-103">TR-103 — FlexMotion 4-Way Trackpant (Men)</option>
+          <option value="TR-104">TR-104 — Apex 2-in-1 Compression Shorts (Men)</option>
+          <option value="TR-105">TR-105 — UltraLite Windshield Jacket (Men)</option>
+          <option value="TR-106">TR-106 — CoreForm Relaxed Muscle Tank (Men)</option>
+          <option value="TR-201">TR-201 — SculptSeamless Compression Tights (Women)</option>
+          <option value="TR-202">TR-202 — CoreFlex High-Support Sports Bra (Women)</option>
+          <option value="TR-203">TR-203 — AirFlow Seamless Crop Top (Women)</option>
+          <option value="TR-204">TR-204 — Kinetic Flex Running Short (Women)</option>
+          <option value="TR-301">TR-301 — Junior Academy Pro Training Tee (Kids)</option>
+          <option value="TR-302">TR-302 — Junior Academy Poly Trackpant (Kids)</option>
+          <option value="TR-401">TR-401 — ProSub Football Match Kit (Teamwear)</option>
+          <option value="TR-402">TR-402 — Tournament Cricket Kit (Teamwear)</option>
+          <option value="TR-403">TR-403 — Courtside Basketball Uniform (Teamwear)</option>
+          <option value="TR-404">TR-404 — Marathon FeatherLite Singlet (Teamwear)</option>
+        </datalist>
+
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 16px;">
+          <button type="button" class="btn-secondary btn-sm" id="quick-order-add-row-btn">
+            + ADD ANOTHER ARTICLE
+          </button>
+          <button type="button" class="btn-primary" id="quick-order-add-all-btn">
+            ADD ALL TO ENQUIRY BAG &rarr;
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- QUICK VIEW MODAL -->
+  <div class="modal-overlay" id="quick-view-modal-overlay">
+    <div class="modal-container quick-view-modal-container">
+      <div class="modal-header">
+        <span class="eyebrow-badge" style="margin: 0;">DIGITAL SHOWROOM SPECIFICATION</span>
+        <button type="button" class="drawer-close-btn quick-view-modal-close" data-close-quick-view>&times;</button>
+      </div>
+      <div class="modal-body" id="quick-view-content">
+        <!-- Content injected dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- B2B WHOLESALE RFQ MODAL -->
+  <div class="modal-overlay" id="rfq-quote-modal-overlay">
+    <div class="modal-container">
+      <div class="modal-header">
+        <div>
+          <span class="eyebrow-badge" style="margin-bottom: 4px;">OFFICIAL B2B TRADE DESK</span>
+          <h3 style="font-family: var(--font-display); font-size: 1.4rem; text-transform: uppercase; margin: 0;">REQUEST WHOLESALE QUOTE</h3>
+        </div>
+        <button type="button" class="drawer-close-btn rfq-modal-close" data-close-rfq-modal>&times;</button>
+      </div>
+      <div class="modal-body">
+        <form id="b2b-rfq-form">
+          <div style="background: var(--bg-surface); border: 1px solid var(--border-color); border-radius: var(--radius-sm); padding: 14px; margin-bottom: 16px;">
+            <div style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-secondary); margin-bottom: 6px;">SELECTED ENQUIRY ARTICLES</div>
+            <div id="rfq-modal-items-summary">
+              <!-- Summary populated from Bag -->
+            </div>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px;">
+            <div class="form-group">
+              <label class="form-label" for="rfq-company">Company / Store Name *</label>
+              <input type="text" id="rfq-company" class="form-input" placeholder="e.g. Apex Sports India" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="rfq-contact">Contact Person Name *</label>
+              <input type="text" id="rfq-contact" class="form-input" placeholder="e.g. Rahul Sharma" required>
+            </div>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px;">
+            <div class="form-group">
+              <label class="form-label" for="rfq-email">Business Email *</label>
+              <input type="email" id="rfq-email" class="form-input" placeholder="buyer@company.com" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="rfq-phone">WhatsApp / Phone Number *</label>
+              <input type="tel" id="rfq-phone" class="form-input" placeholder="+91 98765 43210" required>
+            </div>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px;">
+            <div class="form-group">
+              <label class="form-label" for="rfq-country">Country / City *</label>
+              <input type="text" id="rfq-country" class="form-input" placeholder="e.g. Mumbai, India" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="rfq-customization">Customization / Branding</label>
+              <select id="rfq-customization" class="form-select">
+                <option value="Standard Stock Catalog">Standard Stock Catalog (No OEM)</option>
+                <option value="Private Label OEM (Custom Relabeling)">Private Label OEM (Custom Relabeling)</option>
+                <option value="Custom Teamwear (Sublimation & Names)">Custom Teamwear (Sublimation & Names)</option>
+                <option value="Full Custom Garment Manufacturing">Full Custom Garment Manufacturing</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="rfq-message">Project Notes / Target Timeline</label>
+            <textarea id="rfq-message" class="form-textarea" rows="3" placeholder="Specify required color combinations, target dispatch dates, or custom packing requirements..."></textarea>
+          </div>
+
+          <button type="submit" class="btn-primary" style="width: 100%; padding: 16px; margin-top: 8px;">
+            <span>SEND WHOLESALE ENQUIRY</span>
+            <span>&rarr;</span>
+          </button>
+        </form>
+
+        <div id="rfq-confirmation-view" style="display: none;">
+          <!-- Confirmation injected dynamically -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MOBILE STICKY BOTTOM BAR -->
+  <div class="mobile-sticky-enquiry-bar" id="mobile-sticky-bar">
+    <div class="mobile-bar-inner">
+      <div class="mobile-bag-pill" data-open-enquiry-drawer style="cursor: pointer;">
+        <span>📋 ENQUIRY BAG</span>
+        <span class="bag-badge-count" id="mobile-bag-count-num">0</span>
+      </div>
+      <div style="display: flex; gap: 8px;">
+        <button type="button" class="btn-secondary btn-sm" data-open-quick-order>
+          ⚡ QUICK ORDER
+        </button>
+        <button type="button" class="btn-primary btn-sm" data-open-rfq-modal>
+          QUOTE &rarr;
+        </button>
+      </div>
+    </div>
+  </div>
+  `;
+}
+
+function getFooterHTML() {
+  return `
+  <!-- GLOBAL FOOTER -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Brand Col -->
+        <div>
+          <a href="index.html" class="brand-logo-wrap footer-logo-wrap" aria-label="TRIFLEX Home" style="margin-bottom: 16px;">
+            <img src="images/triflex-emblem-white.png" alt="TRIFLEX Emblem" class="brand-emblem-img-white">
+            <span class="brand-text-block">
+              <span class="brand-title-text text-white">TRIFLEX</span>
+              <span class="brand-subtitle-tag tag-lime">JUST KEEP GOING</span>
+            </span>
+          </a>
+          <p style="color: var(--text-secondary); font-size: 0.88rem; line-height: 1.6; max-width: 320px; margin-bottom: 20px;">
+            Sportswear built for businesses, brands and teams. Direct manufacturer, digital wholesale showroom, and private label production partner.
+          </p>
+          <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--accent-lime);">
+            FACTORY HUB &bull; TIRUPUR &bull; PAN-INDIA DISPATCH
+          </div>
+        </div>
+
+        <!-- Col 2: Showroom -->
+        <div>
+          <h4 class="footer-col-title">COLLECTIONS</h4>
+          <ul class="footer-links-list">
+            <li><a href="collection.html" class="footer-link">All Wholesale Lines</a></li>
+            <li><a href="men.html" class="footer-link">Men's Performance</a></li>
+            <li><a href="women.html" class="footer-link">Women's Sculpt Line</a></li>
+            <li><a href="kids.html" class="footer-link">Junior Academy Line</a></li>
+            <li><a href="teamwear.html" class="footer-link">Custom Teamwear &amp; Kits</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: B2B Solutions -->
+        <div>
+          <h4 class="footer-col-title">B2B SOLUTIONS</h4>
+          <ul class="footer-links-list">
+            <li><a href="wholesale.html" class="footer-link">Wholesale Supply</a></li>
+            <li><a href="private-label.html" class="footer-link">Private Label (OEM)</a></li>
+            <li><a href="teamwear.html" class="footer-link">Custom Teamwear</a></li>
+            <li><a href="manufacturing.html" class="footer-link">Manufacturing Credibility</a></li>
+            <li><a href="cart.html" class="footer-link">Wholesale RFQ Sheet</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Trade Desk -->
+        <div>
+          <h4 class="footer-col-title">TRADE DESK</h4>
+          <ul class="footer-links-list">
+            <li><a href="about.html" class="footer-link">About TRIFLEX</a></li>
+            <li><a href="contact.html" class="footer-link">Contact Trade Desk</a></li>
+            <li><a href="https://wa.me/919876543210" target="_blank" class="footer-link" style="color: var(--accent-lime);">WhatsApp Direct RFQ</a></li>
+            <li><span class="footer-link" style="color: var(--text-muted);">Tirupur / Mumbai / Delhi</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 TRIFLEX SPORTSWEAR MFG. ALL RIGHTS RESERVED.</div>
+        <div style="display: flex; gap: 20px;">
+          <span>B2B WHOLESALE SPECIFICATION</span>
+          <span>GST COMPLIANT TRADE</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+  `;
+}
+
+module.exports = { getHeaderHTML, getModalsAndDrawersHTML, getFooterHTML };

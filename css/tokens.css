@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Space+Grotesk:wght@400;500;600;700;800&family=Syne:wght@700;800;900&family=JetBrains+Mono:wght@500;700&display=swap');
+
+:root {
+  /* ==========================================================================
+     EXACT BRAND COLOR PALETTE & 65 / 20 / 10 / 5 RATIO SYSTEM
+     ========================================================================== */
+  
+  /* 65% Primary Backgrounds & Surfacing */
+  --bg-primary: #F8F9F6;       /* Sport White (Base Canvas) */
+  --bg-surface: #FFFFFF;       /* Pure White (Cards, Header, Forms) */
+  --bg-surface-elevated: #FFFFFF;
+  --bg-surface-card: #FFFFFF;
+  --bg-soft-grey: #F1F4F2;     /* Soft Grey (Section Separator) */
+  --bg-surface-alt: #F0F4F8;   /* Cool Grey Tint */
+  --bg-surface-hover: #EDF2F7;
+  
+  /* 20% Performance Navy (Brand Primary Authority) */
+  --brand-navy: #102A43;        /* Performance Navy */
+  --brand-navy-dark: #0A1C2E;
+  --brand-navy-light: #1E3A5F;
+  --brand-navy-tint: rgba(16, 42, 67, 0.06);
+
+  /* 5% Energy Lime (Precision Sports Energy Signal) */
+  --accent-lime: #B7E600;       /* Energy Lime */
+  --accent-lime-hover: #A5D000;
+  --accent-lime-bg: rgba(183, 230, 0, 0.18);
+  --accent-lime-glow: rgba(183, 230, 0, 0.45);
+
+  /* 10% Text & Borders */
+  --text-primary: #17202A;      /* Carbon */
+  --text-secondary: #62727F;    /* Slate */
+  --text-muted: #829AB1;        /* Muted Slate */
+  --text-inverse: #FFFFFF;      /* Pure White Text on Navy */
+
+  --border-color: #DCE3E8;      /* Cool Grey */
+  --border-light: #E8ECEF;
+  --border-dark: #102A43;
+
+  /* Typography */
+  --font-display: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-heading: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* Layout & Sizing - Disciplined Compact Margins */
+  --container-max-width: 1360px;
+  --container-pad: clamp(16px, 3vw, 32px);
+  --section-pad-y: clamp(36px, 4.5vw, 64px);
+  
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 10px;
+  --radius-full: 9999px;
+
+  /* Transitions */
+  --transition-fast: 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-smooth: 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-slow: 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Elevation Shadows */
+  --shadow-drawer: -10px 0 35px rgba(16, 42, 67, 0.12);
+  --shadow-modal: 0 16px 45px rgba(16, 42, 67, 0.16);
+  --shadow-card: 0 2px 8px rgba(16, 42, 67, 0.04);
+  --shadow-card-hover: 0 8px 24px rgba(16, 42, 67, 0.08);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 15px;
+  scroll-behavior: smooth;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.55;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  overflow-x: hidden;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+img, picture, video, svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+input, button, textarea, select {
+  font: inherit;
+  color: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+ul, ol {
+  list-style: none;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent-lime);
+  outline-offset: 2px;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--container-max-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--container-pad);
+  padding-right: var(--container-pad);
+}

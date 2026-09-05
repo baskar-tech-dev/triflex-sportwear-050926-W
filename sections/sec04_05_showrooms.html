@@ -1,0 +1,50 @@
+﻿<!-- SECTION 04 — FEATURED COLLECTION -->
+<section style="padding: var(--section-pad-y) 0; background: var(--bg-primary); border-bottom: 1px solid var(--border-color);">
+  <div class="container">
+    <div class="section-header-editorial">
+      <div>
+        <span class="mono-tag" style="color: var(--accent-lime);">CORE WHOLESALE ARTICLES</span>
+        <h2 class="heading-xl">NEW COLLECTION / 2026</h2>
+      </div>
+      <button type="button" class="btn-secondary" data-open-quick-order>
+        ⚡ QUICK BULK ORDER
+      </button>
+    </div>
+
+    <div class="products-showcase-grid" id="featured-collection-grid">
+      <!-- Dynamically populated via js/page_renderers.js -->
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 05 — DIGITAL SHOWROOM -->
+<section style="padding: var(--section-pad-y) 0; background: var(--bg-surface); border-bottom: 1px solid var(--border-color);">
+  <div class="container">
+    <div class="section-header-editorial" style="margin-bottom: 30px;">
+      <div>
+        <span class="mono-tag" style="color: var(--accent-lime);">LIVE TRADE SHOWROOM</span>
+        <h2 class="heading-xl">DIGITAL SHOWROOM</h2>
+      </div>
+
+      <!-- Category Filter Tabs -->
+      <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+        <button type="button" class="btn-secondary btn-sm showroom-tab-btn active" data-category="all" style="border-color: var(--accent-lime); background: rgba(200, 240, 0, 0.08);">ALL ARTICLES</button>
+        <button type="button" class="btn-secondary btn-sm showroom-tab-btn" data-category="men">MEN</button>
+        <button type="button" class="btn-secondary btn-sm showroom-tab-btn" data-category="women">WOMEN</button>
+        <button type="button" class="btn-secondary btn-sm showroom-tab-btn" data-category="kids">KIDS</button>
+        <button type="button" class="btn-secondary btn-sm showroom-tab-btn" data-category="teamwear">TEAMWEAR</button>
+      </div>
+    </div>
+
+    <div class="products-showcase-grid" id="digital-showroom-grid">
+      <!-- Dynamically filtered via js/page_renderers.js -->
+    </div>
+
+    <div style="text-align: center; margin-top: 50px;">
+      <a href="collection.html" class="btn-primary">
+        <span>VIEW FULL WHOLESALE COLLECTION</span>
+        <span>&rarr;</span>
+      </a>
+    </div>
+  </div>
+</section>

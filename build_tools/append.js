@@ -1,0 +1,1 @@
+const fs = require('fs'); const [file, mode, b64] = process.argv.slice(2); const text = Buffer.from(b64, 'base64').toString('utf8'); if (mode === 'w') { fs.writeFileSync(file, text, 'utf8'); } else { fs.appendFileSync(file, text, 'utf8'); }

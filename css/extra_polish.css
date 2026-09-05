@@ -1,0 +1,130 @@
+/* --- ADDITIONAL POLISH STYLES FOR LIGHT THEME --- */
+
+/* Hero Glow Backdrop */
+.hero-visual-frame::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 120%;
+  height: 120%;
+  background: radial-gradient(circle, rgba(0, 0, 0, 0.03) 0%, rgba(255, 255, 255, 0) 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero-cutout-img {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-floating-card {
+  z-index: 2;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  border: 1px solid var(--border-color);
+}
+
+/* Micro-interaction & Active States */
+.btn-primary:active {
+  transform: scale(0.98);
+}
+
+.btn-secondary:active {
+  transform: scale(0.98);
+}
+
+/* Custom Scrollbar for Drawer and Modals */
+.drawer-body::-webkit-scrollbar,
+.modal-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.drawer-body::-webkit-scrollbar-track,
+.modal-container::-webkit-scrollbar-track {
+  background: #F8F9FA;
+}
+
+.drawer-body::-webkit-scrollbar-thumb,
+.modal-container::-webkit-scrollbar-thumb {
+  background: #D1D5DB;
+  border-radius: 3px;
+}
+
+.drawer-body::-webkit-scrollbar-thumb:hover,
+.modal-container::-webkit-scrollbar-thumb:hover {
+  background: #9CA3AF;
+}
+
+/* Tab Navigation Active State */
+.showroom-tab-btn.active {
+  border-color: var(--brand-navy) !important;
+  color: #FFFFFF !important;
+  background: var(--brand-navy) !important;
+  border-bottom: 2px solid var(--accent-lime) !important;
+  box-shadow: 0 2px 8px rgba(16, 42, 67, 0.15);
+}
+
+/* Breadcrumb Styling */
+.b2b-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+}
+
+.b2b-breadcrumb a {
+  color: var(--text-secondary);
+}
+
+.b2b-breadcrumb a:hover {
+  color: var(--brand-navy);
+}
+
+/* Specs Tab Switcher in PDP */
+.pdp-tabs-nav {
+  display: flex;
+  gap: 12px;
+  border-bottom: 1px solid var(--border-color);
+  margin: 30px 0 20px;
+}
+
+.pdp-tab-btn {
+  padding: 10px 16px;
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  font-family: var(--font-heading);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.pdp-tab-btn.active {
+  color: var(--brand-navy);
+  border-bottom: 3px solid var(--accent-lime);
+}
+
+.pdp-tab-pane {
+  display: none;
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.pdp-tab-pane.active {
+  display: block;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
