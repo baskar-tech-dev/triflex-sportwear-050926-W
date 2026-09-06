@@ -133,8 +133,12 @@
             <span>&rarr;</span>
           </button>
 
-          <button type="button" class="mobile-menu-toggle" id="drawer-open-btn" aria-label="Open mobile menu">
-            ☰
+          <button type="button" class="mobile-menu-toggle" id="drawer-open-btn" aria-label="Open mobile menu" aria-expanded="false" aria-controls="mobile-drawer">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true">
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
           </button>
         </div>
       </div>
@@ -300,7 +304,7 @@
 
   <!-- MOBILE NAVIGATION DRAWER -->
   <div class="drawer-backdrop" id="mobile-overlay"></div>
-  <aside class="enquiry-drawer" id="mobile-drawer" style="left: 0; right: auto; transform: translateX(-100%);">
+  <aside class="enquiry-drawer" id="mobile-drawer" role="dialog" aria-label="Mobile Navigation Menu">
     <div class="drawer-header">
       <a href="index.html" class="brand-logo-wrap" aria-label="TRIFLEX Home">
         <img src="images/triflex-emblem-dark.png" alt="TRIFLEX Emblem" class="brand-emblem-img">
@@ -309,22 +313,103 @@
           <span class="brand-subtitle-tag">JUST KEEP GOING</span>
         </span>
       </a>
-      <button type="button" class="drawer-close-btn" id="drawer-close-btn">&times;</button>
+      <button type="button" class="drawer-close-btn" id="drawer-close-btn" aria-label="Close Navigation Menu">&times;</button>
     </div>
     <div class="drawer-body">
-      <div style="font-family: var(--font-mono); font-size: 0.68rem; font-weight: 800; color: var(--brand-navy); background: var(--accent-lime); padding: 2px 8px; border-radius: 3px; width: fit-content; margin-bottom: 8px;">WHOLESALE SHOWROOM</div>
-      <a href="collection.html" class="mega-dropdown-item" style="font-size: 1rem; padding: 12px 0;">01 ALL COLLECTIONS</a>
-      <a href="men.html" class="mega-dropdown-item" style="font-size: 1rem; padding: 12px 0;">02 MEN'S PERFORMANCE</a>
-      <a href="women.html" class="mega-dropdown-item" style="font-size: 1rem; padding: 12px 0;">03 WOMEN'S SCULPT LINE</a>
-      <a href="kids.html" class="mega-dropdown-item" style="font-size: 1rem; padding: 12px 0;">04 JUNIOR ACADEMY LINE</a>
-      <a href="teamwear.html" class="mega-dropdown-item" style="font-size: 1rem; padding: 12px 0;">05 CUSTOM TEAMWEAR &amp; KITS</a>
+      <!-- Home Overview Link -->
+      <a href="index.html" class="mobile-nav-link ">
+        <span class="nav-link-main">
+          <span class="nav-idx">00</span>
+          <span>HOME / OVERVIEW</span>
+        </span>
+        <span class="nav-chevron">&rsaquo;</span>
+      </a>
+
+      <div class="mobile-nav-section-title">WHOLESALE SHOWROOM</div>
+      <a href="collection.html" class="mobile-nav-link ">
+        <span class="nav-link-main">
+          <span class="nav-idx">01</span>
+          <span>ALL COLLECTIONS</span>
+        </span>
+        <span class="nav-chevron">&rsaquo;</span>
+      </a>
+      <a href="men.html" class="mobile-nav-link ">
+        <span class="nav-link-main">
+          <span class="nav-idx">02</span>
+          <span>MEN'S PERFORMANCE</span>
+        </span>
+        <span class="nav-chevron">&rsaquo;</span>
+      </a>
+      <a href="women.html" class="mobile-nav-link ">
+        <span class="nav-link-main">
+          <span class="nav-idx">03</span>
+          <span>WOMEN'S SCULPT LINE</span>
+        </span>
+        <span class="nav-chevron">&rsaquo;</span>
+      </a>
+      <a href="kids.html" class="mobile-nav-link active">
+        <span class="nav-link-main">
+          <span class="nav-idx">04</span>
+          <span>JUNIOR ACADEMY LINE</span>
+        </span>
+        <span class="nav-chevron">&rsaquo;</span>
+      </a>
+      <a href="teamwear.html" class="mobile-nav-link ">
+        <span class="nav-link-main">
+          <span class="nav-idx">05</span>
+          <span>CUSTOM TEAMWEAR &amp; KITS</span>
+        </span>
+        <span class="nav-chevron">&rsaquo;</span>
+      </a>
       
-      <div style="font-family: var(--font-mono); font-size: 0.68rem; font-weight: 800; color: var(--brand-navy); background: var(--accent-lime); padding: 2px 8px; border-radius: 3px; width: fit-content; margin: 20px 0 8px;">B2B SOLUTIONS</div>
-      <a href="wholesale.html" class="mega-dropdown-item" style="font-size: 1rem; padding: 12px 0;">06 WHOLESALE SUPPLY</a>
-      <a href="private-label.html" class="mega-dropdown-item" style="font-size: 1rem; padding: 12px 0;">07 PRIVATE LABEL (OEM)</a>
-      <a href="manufacturing.html" class="mega-dropdown-item" style="font-size: 1rem; padding: 12px 0;">08 MANUFACTURING SCALE</a>
-      <a href="about.html" class="mega-dropdown-item" style="font-size: 1rem; padding: 12px 0;">09 THE TRIFLEX MANIFESTO</a>
-      <a href="contact.html" class="mega-dropdown-item" style="font-size: 1rem; padding: 12px 0;">10 TRADE DESK &amp; HUBS</a>
+      <div class="mobile-nav-section-title">B2B SOLUTIONS</div>
+      <a href="wholesale.html" class="mobile-nav-link ">
+        <span class="nav-link-main">
+          <span class="nav-idx">06</span>
+          <span>WHOLESALE SUPPLY</span>
+        </span>
+        <span class="nav-chevron">&rsaquo;</span>
+      </a>
+      <a href="private-label.html" class="mobile-nav-link ">
+        <span class="nav-link-main">
+          <span class="nav-idx">07</span>
+          <span>PRIVATE LABEL (OEM)</span>
+        </span>
+        <span class="nav-chevron">&rsaquo;</span>
+      </a>
+      <a href="manufacturing.html" class="mobile-nav-link ">
+        <span class="nav-link-main">
+          <span class="nav-idx">08</span>
+          <span>MANUFACTURING SCALE</span>
+        </span>
+        <span class="nav-chevron">&rsaquo;</span>
+      </a>
+      <a href="about.html" class="mobile-nav-link ">
+        <span class="nav-link-main">
+          <span class="nav-idx">09</span>
+          <span>THE TRIFLEX MANIFESTO</span>
+        </span>
+        <span class="nav-chevron">&rsaquo;</span>
+      </a>
+      <a href="contact.html" class="mobile-nav-link ">
+        <span class="nav-link-main">
+          <span class="nav-idx">10</span>
+          <span>TRADE DESK &amp; HUBS</span>
+        </span>
+        <span class="nav-chevron">&rsaquo;</span>
+      </a>
+
+      <!-- Quick Action Utilities -->
+      <div class="mobile-nav-quick-row">
+        <a href="https://wa.me/919876543210" target="_blank" class="mobile-nav-pill wa-pill" aria-label="Chat on WhatsApp">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+          <span>WhatsApp Trade</span>
+        </a>
+        <button type="button" class="mobile-nav-pill" data-open-quick-order aria-label="Open Quick Order Matrix">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+          <span>Quick Order</span>
+        </button>
+      </div>
     </div>
     <div class="drawer-footer">
       <button type="button" class="btn-primary" style="width: 100%;" data-open-rfq-modal>

@@ -1,4 +1,4 @@
-﻿const fs = require('fs');
+const fs = require('fs');
 const { getHeaderHTML, getModalsAndDrawersHTML, getFooterHTML } = require('./html_templates.js');
 
 // =========================================================================
@@ -98,7 +98,7 @@ const privateLabelHTML = `<!DOCTYPE html>
     </section>
   </main>
   ${getFooterHTML()}
-  ${getModalsAndDrawersHTML()}
+  ${getModalsAndDrawersHTML('private-label')}
   <script src="js/products.js"></script>
   <script src="js/script.js"></script>
 </body>
@@ -221,7 +221,7 @@ const teamwearHTML = `<!DOCTYPE html>
     </section>
   </main>
   ${getFooterHTML()}
-  ${getModalsAndDrawersHTML()}
+  ${getModalsAndDrawersHTML('teamwear')}
   <script src="js/products.js"></script>
   <script src="js/script.js"></script>
 </body>
@@ -311,7 +311,7 @@ const manufacturingHTML = `<!DOCTYPE html>
     </section>
   </main>
   ${getFooterHTML()}
-  ${getModalsAndDrawersHTML()}
+  ${getModalsAndDrawersHTML('manufacturing')}
   <script src="js/products.js"></script>
   <script src="js/script.js"></script>
 </body>

@@ -1,4 +1,4 @@
-﻿const fs = require('fs');
+const fs = require('fs');
 const { getHeaderHTML, getModalsAndDrawersHTML, getFooterHTML } = require('./html_templates.js');
 
 // =========================================================================
@@ -57,7 +57,7 @@ const aboutHTML = `<!DOCTYPE html>
     </section>
   </main>
   ${getFooterHTML()}
-  ${getModalsAndDrawersHTML()}
+  ${getModalsAndDrawersHTML('about')}
   <script src="js/products.js"></script>
   <script src="js/script.js"></script>
 </body>
@@ -174,7 +174,7 @@ const productHTML = `<!DOCTYPE html>
     </section>
   </main>
   ${getFooterHTML()}
-  ${getModalsAndDrawersHTML()}
+  ${getModalsAndDrawersHTML('product')}
   <script src="js/products.js"></script>
   <script src="js/script.js"></script>
 </body>
@@ -252,7 +252,7 @@ const cartHTML = `<!DOCTYPE html>
     </section>
   </main>
   ${getFooterHTML()}
-  ${getModalsAndDrawersHTML()}
+  ${getModalsAndDrawersHTML('cart')}
   <script src="js/products.js"></script>
   <script src="js/script.js"></script>
 </body>
@@ -332,7 +332,7 @@ const contactHTML = `<!DOCTYPE html>
     </section>
   </main>
   ${getFooterHTML()}
-  ${getModalsAndDrawersHTML()}
+  ${getModalsAndDrawersHTML('contact')}
   <script src="js/products.js"></script>
   <script src="js/script.js"></script>
 </body>

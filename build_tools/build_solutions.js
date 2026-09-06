@@ -1,4 +1,4 @@
-﻿const fs = require('fs');
+const fs = require('fs');
 const { getHeaderHTML, getModalsAndDrawersHTML, getFooterHTML } = require('./html_templates.js');
 
 // =========================================================================
@@ -92,7 +92,7 @@ const wholesaleHTML = `<!DOCTYPE html>
     </section>
   </main>
   ${getFooterHTML()}
-  ${getModalsAndDrawersHTML()}
+  ${getModalsAndDrawersHTML('solutions')}
   <script src="js/products.js"></script>
   <script src="js/script.js"></script>
 </body>

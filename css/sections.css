@@ -1036,8 +1036,10 @@
   line-height: 1.5;
 }
 
-/* --- DRAWER FOR ENQUIRY BAG --- */
-.drawer-backdrop {
+/* --- DRAWER FOR ENQUIRY BAG & MOBILE NAV --- */
+.drawer-backdrop,
+#mobile-overlay,
+.drawer-overlay {
   position: fixed;
   inset: 0;
   background: rgba(16, 42, 67, 0.5);
@@ -1046,10 +1048,14 @@
   z-index: 998;
   opacity: 0;
   visibility: hidden;
+  overscroll-behavior: contain;
+  touch-action: none;
   transition: all var(--transition-smooth);
 }
 
-.drawer-backdrop.active {
+.drawer-backdrop.active,
+#mobile-overlay.active,
+.drawer-overlay.active {
   opacity: 1;
   visibility: visible;
 }
@@ -1057,16 +1063,22 @@
 .enquiry-drawer {
   position: fixed;
   top: 0;
+  bottom: 0;
   right: 0;
   width: 100%;
   max-width: 440px;
+  height: 100%;
   height: 100vh;
+  height: 100dvh;
+  max-height: 100%;
   background: #FFFFFF;
   border-left: 1px solid var(--border-color);
   box-shadow: var(--shadow-drawer);
   z-index: 999;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
+  overscroll-behavior: contain;
   transform: translateX(100%);
   transition: transform var(--transition-smooth);
 }
@@ -1076,6 +1088,10 @@
 }
 
 .drawer-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  flex-shrink: 0;
   padding: 16px 20px;
   border-bottom: 1px solid var(--border-color);
   display: flex;
@@ -1086,20 +1102,32 @@
 
 .drawer-close-btn {
   background: none;
-  border: none;
+  border: 1px solid transparent;
+  border-radius: var(--radius-sm);
   color: var(--text-secondary);
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   cursor: pointer;
   line-height: 1;
+  width: 36px;
+  height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-fast);
 }
 
 .drawer-close-btn:hover {
   color: var(--brand-navy);
+  background: var(--bg-surface-alt);
+  border-color: var(--border-color);
 }
 
 .drawer-body {
   flex: 1;
+  min-height: 0;
   overflow-y: auto;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
   padding: 18px 20px;
   display: flex;
   flex-direction: column;
@@ -1183,9 +1211,13 @@
 }
 
 .drawer-footer {
+  position: sticky;
+  bottom: 0;
+  z-index: 20;
+  flex-shrink: 0;
   padding: 18px 20px;
   border-top: 1px solid var(--border-color);
-  background: var(--bg-surface-alt);
+  background: #FFFFFF;
   display: flex;
   flex-direction: column;
   gap: 10px;

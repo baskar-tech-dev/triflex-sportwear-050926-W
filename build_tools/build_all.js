@@ -1,4 +1,4 @@
-﻿const fs = require('fs');
+const fs = require('fs');
 const { getHeaderHTML, getModalsAndDrawersHTML, getFooterHTML } = require('./html_templates.js');
 
 // 01. Bundle CSS
@@ -55,7 +55,7 @@ const indexHTML = `<!DOCTYPE html>
     ${sec9_14}
   </main>
   ${getFooterHTML()}
-  ${getModalsAndDrawersHTML()}
+  ${getModalsAndDrawersHTML('home')}
   <script src="js/products.js"></script>
   <script src="js/script.js"></script>
 </body>
@@ -137,7 +137,7 @@ function buildCol(category, title, subtitle, activeNav) {
     </section>
   </main>
   ${getFooterHTML()}
-  ${getModalsAndDrawersHTML()}
+  ${getModalsAndDrawersHTML(category === 'all' ? 'collection' : category)}
   <script src="js/products.js"></script>
   <script src="js/script.js"></script>
 </body>

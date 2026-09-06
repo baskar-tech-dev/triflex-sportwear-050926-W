@@ -205,7 +205,7 @@ const productHTML = `<!DOCTYPE html>
     </section>
   </main>
   ${getFooterHTML()}
-  ${getModalsAndDrawersHTML()}
+  ${getModalsAndDrawersHTML('product')}
 
   <script>
     function switchPdpTab(tabId, btn) {

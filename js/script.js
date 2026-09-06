@@ -1,5 +1,5 @@
 /**
- * TRIFLEX MASTER SCRIPT
+ * TRIFLEX SPORTSWEAR — MASTER CLIENT CONTROLLER
  */
 
 /**
@@ -942,20 +942,83 @@ document.addEventListener('DOMContentLoaded', () => {
   const mobileClose = document.getElementById('drawer-close-btn');
 
   if (mobileToggle && mobileDrawer && mobileOverlay) {
-    mobileToggle.addEventListener('click', () => {
+    const openMobileNav = () => {
       mobileDrawer.classList.add('active');
       mobileOverlay.classList.add('active');
+      mobileToggle.setAttribute('aria-expanded', 'true');
       document.body.style.overflow = 'hidden';
-    });
+      const drawerBody = mobileDrawer.querySelector('.drawer-body');
+      if (drawerBody) {
+        drawerBody.scrollTop = 0;
+      }
+    };
 
     const closeMobileNav = () => {
       mobileDrawer.classList.remove('active');
       mobileOverlay.classList.remove('active');
+      mobileToggle.setAttribute('aria-expanded', 'false');
       document.body.style.overflow = '';
     };
 
+    mobileToggle.addEventListener('click', (e) => {
+      e.stopPropagation();
+      if (mobileDrawer.classList.contains('active')) {
+        closeMobileNav();
+      } else {
+        openMobileNav();
+      }
+    });
+
     if (mobileClose) mobileClose.addEventListener('click', closeMobileNav);
     mobileOverlay.addEventListener('click', closeMobileNav);
+
+    // Auto-close when clicking any link inside the mobile drawer
+    mobileDrawer.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        closeMobileNav();
+      });
+    });
+
+    // Auto-close when launching RFQ modal or Quick Order from inside the drawer
+    mobileDrawer.querySelectorAll('[data-open-rfq-modal], [data-open-quick-order]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        closeMobileNav();
+      });
+    });
+
+    // Close on Escape key press
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && mobileDrawer.classList.contains('active')) {
+        closeMobileNav();
+      }
+    });
+
+    // Auto-close if screen is resized to desktop width (>= 992px)
+    window.addEventListener('resize', () => {
+      if (window.innerWidth >= 992 && mobileDrawer.classList.contains('active')) {
+        closeMobileNav();
+      }
+    });
+
+    // Highlight active link based on current path if not already marked
+    try {
+      const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+      const navLinks = mobileDrawer.querySelectorAll('.mobile-nav-link');
+      let foundExact = false;
+      navLinks.forEach(link => {
+        const href = link.getAttribute('href');
+        if (href === currentPath || (currentPath === '' && href === 'index.html')) {
+          link.classList.add('active');
+          foundExact = true;
+        }
+      });
+      if (!foundExact && (currentPath === 'men.html' || currentPath === 'women.html' || currentPath === 'kids.html')) {
+        const colLink = mobileDrawer.querySelector('a[href="collection.html"]');
+        if (colLink) colLink.classList.add('active');
+      }
+    } catch (err) {
+      // safe fallback
+    }
   }
 
   // 06. Interactive & Continuous Scrollable Announcement Bar (Marquee Ticker + Native Touch Swipe)

@@ -111,7 +111,7 @@
   }
 
   .mobile-menu-toggle {
-    display: block;
+    display: inline-flex;
   }
 
   .mobile-sticky-enquiry-bar {
@@ -399,6 +399,10 @@
 
   .enquiry-drawer {
     max-width: 100%;
+  }
+
+  #mobile-drawer {
+    max-width: min(340px, 86vw);
   }
 
   .quick-view-grid {
