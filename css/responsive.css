@@ -164,6 +164,11 @@
     gap: 24px;
   }
 
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
   .workflow-steps-horizontal {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -379,6 +384,25 @@
   .process-steps-grid {
     grid-template-columns: 1fr;
     gap: 12px;
+  }
+
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .testimonial-card {
+    padding: 20px 16px;
+  }
+
+  .testimonial-quote {
+    font-size: 0.88rem;
+    line-height: 1.55;
+    margin-bottom: 16px;
+  }
+
+  .testimonial-meta {
+    padding-top: 12px;
   }
 
   .process-flow-compact {

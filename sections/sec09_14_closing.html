@@ -157,9 +157,9 @@
 </section>
 
 <!-- SECTION 12 — SOCIAL PROOF -->
-<section style="padding: var(--section-pad-y) 0; background: var(--bg-primary); border-bottom: 1px solid var(--border-color);">
+<section id="testimonials" class="testimonials-section" style="padding: var(--section-pad-y) 0; background: var(--bg-primary); border-bottom: 1px solid var(--border-color);">
   <div class="container">
-    <div style="text-align: center; max-width: 650px; margin: 0 auto 50px;">
+    <div style="text-align: center; max-width: 650px; margin: 0 auto clamp(24px, 4vw, 44px);">
       <span class="mono-tag" style="color: var(--accent-lime);">CREDENTIALS &amp; TESTIMONIALS</span>
       <h2 class="heading-xl" style="margin: 8px 0 16px;">TRUSTED BY BUSINESSES</h2>
       <p class="text-muted-p" style="margin: 0 auto;">
@@ -167,34 +167,43 @@
       </p>
     </div>
 
-    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;">
-      <div style="background: var(--bg-surface); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 32px 24px; display: flex; flex-direction: column; justify-content: space-between;">
-        <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 24px; font-style: italic;">
-          "TRIFLEX has become our primary sportswear supplier across 14 multi-brand sports stores. The 180 GSM motion tees and 240 GSM trackpants sell through with almost zero customer returns."
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <p class="testimonial-quote">
+          &ldquo;TRIFLEX has become our primary sportswear supplier across 14 multi-brand sports stores. The 180 GSM motion tees and 240 GSM trackpants sell through with almost zero customer returns.&rdquo;
         </p>
-        <div>
-          <strong style="color: var(--text-primary); font-family: var(--font-heading); display: block;">Rajesh M.</strong>
-          <span style="font-size: 0.78rem; color: var(--accent-lime); font-family: var(--font-mono);">Director, Apex Sports Retail Group</span>
+        <div class="testimonial-meta">
+          <div class="testimonial-author-row">
+            <strong class="testimonial-name">Rajesh M.</strong>
+            <span class="testimonial-badge">VERIFIED BUYER</span>
+          </div>
+          <span class="testimonial-role">Director, Apex Sports Retail Group</span>
         </div>
       </div>
 
-      <div style="background: var(--bg-surface); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 32px 24px; display: flex; flex-direction: column; justify-content: space-between;">
-        <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 24px; font-style: italic;">
-          "We developed our entire private label activewear line with TRIFLEX. Their tech-pack assistance, fabric selection, and precise silicone relabeling made launching our direct-to-consumer brand seamless."
+      <div class="testimonial-card">
+        <p class="testimonial-quote">
+          &ldquo;We developed our entire private label activewear line with TRIFLEX. Their tech-pack assistance, fabric selection, and precise silicone relabeling made launching our direct-to-consumer brand seamless.&rdquo;
         </p>
-        <div>
-          <strong style="color: var(--text-primary); font-family: var(--font-heading); display: block;">Ananya S.</strong>
-          <span style="font-size: 0.78rem; color: var(--accent-lime); font-family: var(--font-mono);">Founder, Kinetic Core Active</span>
+        <div class="testimonial-meta">
+          <div class="testimonial-author-row">
+            <strong class="testimonial-name">Ananya S.</strong>
+            <span class="testimonial-badge">VERIFIED BUYER</span>
+          </div>
+          <span class="testimonial-role">Founder, Kinetic Core Active</span>
         </div>
       </div>
 
-      <div style="background: var(--bg-surface); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 32px 24px; display: flex; flex-direction: column; justify-content: space-between;">
-        <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 24px; font-style: italic;">
-          "We ordered over 800 sublimated football kits for our state academy tournament. The Italian sublimation dye depth was outstanding and the shipment arrived 2 days ahead of schedule."
+      <div class="testimonial-card">
+        <p class="testimonial-quote">
+          &ldquo;We ordered over 800 sublimated football kits for our state academy tournament. The Italian sublimation dye depth was outstanding and the shipment arrived 2 days ahead of schedule.&rdquo;
         </p>
-        <div>
-          <strong style="color: var(--text-primary); font-family: var(--font-heading); display: block;">Vikram D.</strong>
-          <span style="font-size: 0.78rem; color: var(--accent-lime); font-family: var(--font-mono);">Head Coach, United Sports Academy</span>
+        <div class="testimonial-meta">
+          <div class="testimonial-author-row">
+            <strong class="testimonial-name">Vikram D.</strong>
+            <span class="testimonial-badge">VERIFIED BUYER</span>
+          </div>
+          <span class="testimonial-role">Head Coach, United Sports Academy</span>
         </div>
       </div>
     </div>
