@@ -1,0 +1,1047 @@
+<?php
+/**
+ * TRIFLEX Sportswear - Dark Cinematic Hero Section Showcase
+ * File: index1.php
+ * Accurately created to match the client's design reference
+ */
+$page_title = "TRIFLEX | Just Keep Going — Performance Apparel & Wholesale Manufacturing";
+$current_year = date('Y');
+$initial_enquiry_count = 4; // Matches the client's reference badge (4)
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><?php echo htmlspecialchars($page_title); ?></title>
+  <meta name="description" content="TRIFLEX is a high-performance sportswear wholesale, OEM and private-label manufacturer for brands, retailers, distributors and teams. Built for business. Just keep going.">
+  
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+  <!-- Google Fonts: Barlow Condensed (Heavy Italic), Space Grotesk, Plus Jakarta Sans, JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,700;0,800;0,900;1,700;1,800;1,900&family=JetBrains+Mono:wght@400;500;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Core Base Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Dedicated Dark Cinematic Hero Stylesheet -->
+  <link rel="stylesheet" href="css/hero-dark.css">
+</head>
+<body id="home-page-hero1" class="hero1-page-theme">
+
+  <!-- =========================================================================
+       HERO SECTION — EXACT REPLICA OF CLIENT'S DESIGN REFERENCE
+       ========================================================================= -->
+  <section class="hero-dark-master" id="hero-showcase" aria-label="TRIFLEX Hero Showcase">
+    
+    <!-- Dynamic Cinematic Background Layers -->
+    <div class="hero-bg-canvas" aria-hidden="true">
+      <!-- 4 Slides corresponding to Men's, Women's, Kids, and Sports Team -->
+      <div class="hero-bg-slide hero-bg-slide-mens active" data-slide-index="0"></div>
+      <div class="hero-bg-slide hero-bg-slide-womens" data-slide-index="1"></div>
+      <div class="hero-bg-slide hero-bg-slide-kids" data-slide-index="2"></div>
+      <div class="hero-bg-slide hero-bg-slide-teams" data-slide-index="3"></div>
+
+      <!-- Atmospheric Diagonal Studio Light Streaks -->
+      <div class="hero-light-streaks"></div>
+
+      <!-- Subtle Technical Mesh Overlay & Vignette -->
+      <div class="hero-mesh-overlay"></div>
+      <div class="hero-vignette-overlay"></div>
+    </div>
+
+    <!-- Integrated Dark Header -->
+    <header class="hero-dark-header" id="hero-header">
+      <div class="hero-header-inner">
+        
+        <!-- Left: Brand Logo Lockup (White Emblem + TRIFLEX + JUST KEEP GOING) -->
+        <a href="index1.php" class="hero-brand-lockup" aria-label="TRIFLEX Homepage">
+          <img src="images/triflex-emblem-white.png" alt="TRIFLEX Emblem" class="hero-logo-emblem">
+          <div class="hero-logo-text-wrap">
+            <span class="hero-brand-name">TRIFLEX</span>
+            <span class="hero-brand-motto">JUST KEEP GOING</span>
+          </div>
+        </a>
+
+        <!-- Center: Primary Navigation Links -->
+        <nav class="hero-desktop-nav" aria-label="Primary Navigation">
+          <ul class="hero-nav-links">
+            <li class="hero-nav-item">
+              <a href="collection.html" class="hero-nav-anchor has-arrow">COLLECTION</a>
+              <div class="hero-dropdown-box">
+                <a href="collection.html" class="hero-dropdown-link">All Wholesale Lines</a>
+                <a href="men.html" class="hero-dropdown-link">Men's Performance</a>
+                <a href="women.html" class="hero-dropdown-link">Women's Sculpt Line</a>
+                <a href="kids.html" class="hero-dropdown-link">Junior Academy Line</a>
+                <a href="teamwear.html" class="hero-dropdown-link">Custom Teamwear &amp; Kits</a>
+              </div>
+            </li>
+            <li class="hero-nav-item">
+              <a href="wholesale.html" class="hero-nav-anchor has-arrow">SOLUTIONS</a>
+              <div class="hero-dropdown-box">
+                <a href="wholesale.html" class="hero-dropdown-link">Wholesale Supply</a>
+                <a href="private-label.html" class="hero-dropdown-link">Private Label OEM</a>
+                <a href="teamwear.html" class="hero-dropdown-link">Custom Teamwear</a>
+                <a href="manufacturing.html" class="hero-dropdown-link">Factory Production Hub</a>
+              </div>
+            </li>
+            <li class="hero-nav-item">
+              <a href="manufacturing.html" class="hero-nav-anchor">MANUFACTURING</a>
+            </li>
+            <li class="hero-nav-item">
+              <a href="about.html" class="hero-nav-anchor">ABOUT</a>
+            </li>
+            <li class="hero-nav-item">
+              <a href="contact.html" class="hero-nav-anchor">CONTACT</a>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Right: Action Buttons (Search, Bag with Badge, Lime Enquire Pill) -->
+        <div class="hero-header-actions">
+          <!-- Search Trigger Icon -->
+          <button type="button" class="hero-search-btn" data-open-search aria-label="Search catalog articles">
+            <svg class="hero-search-icon" viewBox="0 0 24 24">
+              <circle cx="11" cy="11" r="7"></circle>
+              <line x1="16.5" y1="16.5" x2="22" y2="22"></line>
+            </svg>
+          </button>
+
+          <!-- Divider | -->
+          <span class="hero-action-divider" aria-hidden="true"></span>
+
+          <!-- Enquiry Bag Button with Lime Badge (4) -->
+          <button type="button" class="hero-bag-btn" data-open-enquiry-drawer aria-label="Open B2B Enquiry Bag">
+            <span>ENQUIRY BAG</span>
+            <span class="hero-bag-badge bag-badge-count" id="hero-bag-badge"><?php echo (int)$initial_enquiry_count; ?></span>
+          </button>
+
+          <!-- Vibrant Lime ENQUIRE -> Pill Button -->
+          <button type="button" class="hero-enquire-pill-btn" data-open-rfq-modal aria-label="Start Wholesale RFQ">
+            <span>ENQUIRE</span>
+            <span class="hero-enquire-arrow">&rarr;</span>
+          </button>
+
+          <!-- Mobile Hamburger Toggle Button -->
+          <button type="button" class="hero-mobile-toggle-btn" id="drawer-open-btn" aria-label="Open Mobile Menu">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+
+      </div>
+    </header>
+
+    <!-- Central Hero Stage -->
+    <div class="hero-stage">
+      <div class="hero-stage-grid">
+        
+        <!-- Left Side: Performance Apparel Tag + Massive Metallic Italic Headline -->
+        <div class="hero-stage-main">
+          
+          <div class="hero-eyebrow-row">
+            <span class="hero-eyebrow-tag">PERFORMANCE APPAREL</span>
+            <span class="hero-eyebrow-hairline" aria-hidden="true"></span>
+          </div>
+
+          <div class="hero-headline-wrap">
+            <h1 class="hero-headline">
+              <span class="hero-headline-line">
+                <span class="hero-headline-line-split">JUST </span>KEEP
+              </span>
+              <span class="hero-headline-line">GOING.</span>
+            </h1>
+          </div>
+
+          <!-- Mobile Category Accordion / Pill List (Visible only on mobile <= 900px, matching phone mockup) -->
+          <div class="hero-mobile-pills-wrap" aria-label="Mobile Collections Selector">
+            <div class="hero-mobile-pills-list">
+              
+              <!-- 01: Men's Wear (Active by default) -->
+              <button type="button" class="hero-mobile-pill-item active" data-slide-target="0">
+                <div class="hero-mobile-pill-left">
+                  <span class="hero-mobile-pill-radio">
+                    <span class="hero-mobile-pill-radio-dot"></span>
+                  </span>
+                  <span>MEN'S WEAR</span>
+                </div>
+                <span class="hero-mobile-pill-chevron">&rsaquo;</span>
+              </button>
+
+              <!-- 02: Women's Wear -->
+              <button type="button" class="hero-mobile-pill-item" data-slide-target="1">
+                <div class="hero-mobile-pill-left">
+                  <span class="hero-mobile-pill-radio">
+                    <span class="hero-mobile-pill-radio-dot"></span>
+                  </span>
+                  <span>WOMEN'S WEAR</span>
+                </div>
+                <span class="hero-mobile-pill-chevron">&rsaquo;</span>
+              </button>
+
+              <!-- 03: Kids Wear -->
+              <button type="button" class="hero-mobile-pill-item" data-slide-target="2">
+                <div class="hero-mobile-pill-left">
+                  <span class="hero-mobile-pill-radio">
+                    <span class="hero-mobile-pill-radio-dot"></span>
+                  </span>
+                  <span>KIDS WEAR</span>
+                </div>
+                <span class="hero-mobile-pill-chevron">&rsaquo;</span>
+              </button>
+
+              <!-- 04: Sports Team -->
+              <button type="button" class="hero-mobile-pill-item" data-slide-target="3">
+                <div class="hero-mobile-pill-left">
+                  <span class="hero-mobile-pill-radio">
+                    <span class="hero-mobile-pill-radio-dot"></span>
+                  </span>
+                  <span>SPORTS TEAM</span>
+                </div>
+                <span class="hero-mobile-pill-chevron">&rsaquo;</span>
+              </button>
+
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right Side: Vertical Accent Bar + BUILT FOR List -->
+        <div class="hero-built-for-card">
+          <div class="hero-built-accent-bar" aria-hidden="true"></div>
+          <div class="hero-built-content">
+            <span class="hero-built-eyebrow">BUILT FOR</span>
+            <span class="hero-built-role">BRANDS.</span>
+            <span class="hero-built-role">RETAILERS.</span>
+            <span class="hero-built-role">DISTRIBUTORS.</span>
+            <span class="hero-built-role">TEAMS.</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Bottom Controls & Category Navigation Bar -->
+    <div class="hero-bottom-bar">
+      <div class="hero-bottom-grid">
+        
+        <!-- Bottom Left: Explore Collections, Arrow Buttons, Category Tabs & Sub-credentials -->
+        <div class="hero-bottom-left-block">
+          <div class="hero-explore-controls-row">
+            
+            <div class="hero-explore-label-wrap">
+              <span class="hero-explore-title">EXPLORE<br>COLLECTIONS</span>
+              <span class="hero-explore-line" aria-hidden="true"></span>
+            </div>
+
+            <!-- Circular Prev Button -->
+            <button type="button" class="hero-nav-arrow-btn prev-btn" aria-label="Previous category slide">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round">
+                <polyline points="15 18 9 12 15 6"></polyline>
+              </svg>
+            </button>
+
+            <!-- Category Tabs with active lime underline -->
+            <div class="hero-category-tabs-group" role="tablist" aria-label="Product Categories">
+              <button type="button" class="hero-cat-tab active" role="tab" aria-selected="true" data-slide-target="0">
+                <span>MEN'S WEAR</span>
+              </button>
+              <span class="hero-tab-sep" aria-hidden="true">|</span>
+              <button type="button" class="hero-cat-tab" role="tab" aria-selected="false" data-slide-target="1">
+                <span>WOMEN'S WEAR</span>
+              </button>
+              <span class="hero-tab-sep" aria-hidden="true">|</span>
+              <button type="button" class="hero-cat-tab" role="tab" aria-selected="false" data-slide-target="2">
+                <span>KIDS WEAR</span>
+              </button>
+              <span class="hero-tab-sep" aria-hidden="true">|</span>
+              <button type="button" class="hero-cat-tab" role="tab" aria-selected="false" data-slide-target="3">
+                <span>SPORTS TEAM</span>
+              </button>
+            </div>
+
+            <!-- Circular Next Button -->
+            <button type="button" class="hero-nav-arrow-btn next-btn" aria-label="Next category slide">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round">
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg>
+            </button>
+
+          </div>
+
+          <!-- Technical Micro-Credentials -->
+          <div class="hero-credentials-list">
+            <span>HIGH-PERFORMANCE FABRICS</span>
+            <span>CUSTOM SOLUTIONS</span>
+            <span>GLOBAL SUPPLY</span>
+          </div>
+        </div>
+
+        <!-- Bottom Center: Animated Mouse Scroll Indicator -->
+        <a href="#collection-discovery" class="hero-scroll-indicator" aria-label="Scroll down to explore collection">
+          <div class="hero-mouse-pill" aria-hidden="true">
+            <span class="hero-mouse-wheel-dot"></span>
+          </div>
+          <span class="hero-scroll-caption">SCROLL TO EXPLORE</span>
+          <span class="hero-scroll-line" aria-hidden="true"></span>
+        </a>
+
+        <!-- Bottom Right: Slide Number Pagination (01 in lime / 04) and Progress Bar -->
+        <div class="hero-pagination-block" aria-label="Slide Indicator">
+          <div class="hero-page-counter">
+            <span class="hero-page-num-active">01</span>
+            <span class="hero-page-num-sep">/</span>
+            <span class="hero-page-num-total">04</span>
+          </div>
+          <div class="hero-progress-track" aria-hidden="true">
+            <div class="hero-progress-bar" style="width: 25%;"></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </section>
+
+  <!-- =========================================================================
+       MAIN CONTENT (SEAMLESS TRANSITION FROM HERO TO CATALOG & B2B SPECIFICATIONS)
+       ========================================================================= -->
+  <main id="main-content">
+
+    <!-- SECTION 02 — COLLECTION DISCOVERY -->
+    <section id="collection-discovery" style="padding: var(--section-pad-y) 0; background: var(--bg-primary); border-bottom: 1px solid var(--border-color);">
+      <div class="container">
+        <div class="section-header-editorial">
+          <div>
+            <span class="mono-tag" style="color: var(--accent-lime);">DISCOVERY ARCHITECTURE</span>
+            <h2 class="heading-xl">EXPLORE THE COLLECTION</h2>
+          </div>
+          <a href="collection.html" class="btn-ghost">VIEW COMPLETE SHOWROOM &rarr;</a>
+        </div>
+
+        <div class="category-discovery-grid">
+          <!-- Men -->
+          <a href="men.html" class="category-card" aria-label="Explore Men's Wholesale Sportswear - 140 to 240 GSM Technical Lines">
+            <img src="images/mens.png" alt="Men's Sports Wholesale Sportswear" class="category-card-bg" loading="lazy">
+            <div class="category-card-topbar">
+              <span class="category-specs-badge">140–240 GSM</span>
+              <span class="category-action-pill">VIEW LINE &rarr;</span>
+            </div>
+            <h3 class="sr-only">Men's Sportswear</h3>
+          </a>
+
+          <!-- Women -->
+          <a href="women.html" class="category-card" aria-label="Explore Women's Sculpt Activewear - 240 to 260 GSM High-Compression">
+            <img src="images/women.png" alt="Women's Sports Sculpt Activewear" class="category-card-bg" loading="lazy">
+            <div class="category-card-topbar">
+              <span class="category-specs-badge">240–260 GSM</span>
+              <span class="category-action-pill">VIEW LINE &rarr;</span>
+            </div>
+            <h3 class="sr-only">Women's Sports</h3>
+          </a>
+
+          <!-- Kids -->
+          <a href="kids.html" class="category-card" aria-label="Explore Kids' Sports Academy Line - Ages 6 to 16 Years">
+            <img src="images/kids.png" alt="Kids' Sportswear Junior Academy Line" class="category-card-bg" loading="lazy">
+            <div class="category-card-topbar">
+              <span class="category-specs-badge">AGES 6–16 YRS</span>
+              <span class="category-action-pill">VIEW LINE &rarr;</span>
+            </div>
+            <h3 class="sr-only">Kids' Sportswear</h3>
+          </a>
+
+          <!-- Teamwear -->
+          <a href="teamwear.html" class="category-card" aria-label="Explore Custom Sublimated Teamwear - Pro Matchday Kits">
+            <img src="images/teamwear.png" alt="Team Wear Custom Matchday Kits" class="category-card-bg" loading="lazy">
+            <div class="category-card-topbar">
+              <span class="category-specs-badge">MATCHDAY KITS</span>
+              <span class="category-action-pill">VIEW LINE &rarr;</span>
+            </div>
+            <h3 class="sr-only">Team Wear</h3>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 03 — SHOP BY BUSINESS NEED -->
+    <section style="padding: var(--section-pad-y) 0; background: var(--bg-surface); border-bottom: 1px solid var(--border-color);">
+      <div class="container">
+        <div style="text-align: center; max-width: 700px; margin: 0 auto 50px;">
+          <span class="mono-tag" style="color: var(--accent-lime);">B2B SOURCING PATHWAYS</span>
+          <h2 class="heading-xl" style="margin: 8px 0 16px;">WHAT ARE YOU BUILDING?</h2>
+          <p class="text-muted-p" style="margin: 0 auto;">
+            Select your commercial path to connect with our specialized manufacturing and supply divisions.
+          </p>
+        </div>
+
+        <div class="business-need-grid">
+          <!-- Path 1: Wholesale -->
+          <div class="business-path-card">
+            <div>
+              <span class="path-number">01 / SUPPLY</span>
+              <h3 class="path-title">WHOLESALE</h3>
+              <p class="path-desc">
+                For sports retailers, multi-brand regional distributors, and gym pro-shops seeking ready-to-dispatch inventory, retail-ready poly packaging, and strong gross margin structures.
+              </p>
+              <ul style="font-size: 0.82rem; color: var(--text-secondary); margin-bottom: 24px; line-height: 1.8;">
+                <li>&bull; Low MOQ starting at 40 Pcs per assorted article</li>
+                <li>&bull; Barcoded individual hangtag &amp; poly packaging</li>
+                <li>&bull; 24–48 Hour Pan-India warehouse dispatch</li>
+              </ul>
+            </div>
+            <a href="wholesale.html" class="btn-primary" style="width: 100%; text-align: center;">
+              <span>EXPLORE WHOLESALE</span>
+              <span>&rarr;</span>
+            </a>
+          </div>
+
+          <!-- Path 2: Private Label -->
+          <div class="business-path-card">
+            <div>
+              <span class="path-number">02 / BRANDING</span>
+              <h3 class="path-title">PRIVATE LABEL</h3>
+              <p class="path-desc">
+                For athletic apparel brands, fitness influencers, and gym chains building their own proprietary sportswear collection with custom relabeling, tags, and custom dye batches.
+              </p>
+              <ul style="font-size: 0.82rem; color: var(--text-secondary); margin-bottom: 24px; line-height: 1.8;">
+                <li>&bull; Custom woven neck labels &amp; silicone transfers</li>
+                <li>&bull; Bespoke custom GSM knits and Pantone shades</li>
+                <li>&bull; End-to-end sampling and tech-pack development</li>
+              </ul>
+            </div>
+            <a href="private-label.html" class="btn-primary" style="width: 100%; text-align: center;">
+              <span>BUILD YOUR BRAND</span>
+              <span>&rarr;</span>
+            </a>
+          </div>
+
+          <!-- Path 3: Teamwear -->
+          <div class="business-path-card">
+            <div>
+              <span class="path-number">03 / PERFORMANCE</span>
+              <h3 class="path-title">TEAMWEAR</h3>
+              <p class="path-desc">
+                For professional clubs, sports academies, school athletic programs, and corporate sports leagues requiring custom sublimated jerseys, custom roster numbers, and team logos.
+              </p>
+              <ul style="font-size: 0.82rem; color: var(--text-secondary); margin-bottom: 24px; line-height: 1.8;">
+                <li>&bull; 100% Full-bleed zero-fade Italian sublimation</li>
+                <li>&bull; Individual player names &amp; custom roster numbering</li>
+                <li>&bull; 7–10 Day rapid turnaround for matchday kits</li>
+              </ul>
+            </div>
+            <a href="teamwear.html" class="btn-primary" style="width: 100%; text-align: center;">
+              <span>CREATE TEAMWEAR</span>
+              <span>&rarr;</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 04 — FEATURED CORE ARTICLES -->
+    <section style="padding: var(--section-pad-y) 0; background: var(--bg-primary); border-bottom: 1px solid var(--border-color);">
+      <div class="container">
+        <div class="section-header-editorial">
+          <div>
+            <span class="mono-tag" style="color: var(--accent-lime);">CORE WHOLESALE ARTICLES</span>
+            <h2 class="heading-xl">NEW COLLECTION / <?php echo htmlspecialchars($current_year); ?></h2>
+          </div>
+          <button type="button" class="btn-secondary" data-open-quick-order>
+            ⚡ QUICK BULK ORDER
+          </button>
+        </div>
+
+        <div class="products-showcase-grid" id="featured-collection-grid">
+          <!-- Dynamically populated via js/page_renderers.js or js/products.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 05 — DIGITAL SHOWROOM -->
+    <section style="padding: var(--section-pad-y) 0; background: var(--bg-surface); border-bottom: 1px solid var(--border-color);">
+      <div class="container">
+        <div class="section-header-editorial" style="margin-bottom: 30px;">
+          <div>
+            <span class="mono-tag" style="color: var(--accent-lime);">LIVE TRADE SHOWROOM</span>
+            <h2 class="heading-xl">DIGITAL SHOWROOM</h2>
+          </div>
+
+          <!-- Category Filter Tabs -->
+          <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+            <button type="button" class="btn-secondary btn-sm showroom-tab-btn active" data-category="all" style="border-color: var(--accent-lime); background: rgba(200, 240, 0, 0.08);">ALL ARTICLES</button>
+            <button type="button" class="btn-secondary btn-sm showroom-tab-btn" data-category="men">MEN</button>
+            <button type="button" class="btn-secondary btn-sm showroom-tab-btn" data-category="women">WOMEN</button>
+            <button type="button" class="btn-secondary btn-sm showroom-tab-btn" data-category="kids">KIDS</button>
+            <button type="button" class="btn-secondary btn-sm showroom-tab-btn" data-category="teamwear">TEAMWEAR</button>
+          </div>
+        </div>
+
+        <div class="products-showcase-grid" id="digital-showroom-grid">
+          <!-- Dynamically filtered via js/page_renderers.js -->
+        </div>
+
+        <div style="text-align: center; margin-top: 50px;">
+          <a href="collection.html" class="btn-primary">
+            <span>VIEW FULL WHOLESALE COLLECTION</span>
+            <span>&rarr;</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 06 — BUSINESS CAPABILITY (BUILT FOR BULK) -->
+    <section style="padding: var(--section-pad-y) 0; background: var(--bg-primary); border-bottom: 1px solid var(--border-color);">
+      <div class="container">
+        <div style="margin-bottom: 40px;">
+          <span class="mono-tag" style="color: var(--accent-lime);">MANUFACTURING CREDIBILITY</span>
+          <h2 class="heading-xl">BUILT FOR BULK.</h2>
+          <p class="text-muted-p">
+            Engineered supply chains designed to absorb large volume cycles with zero deviation in fabric weight, dimensional stability, or stitching tolerances.
+          </p>
+        </div>
+
+        <div class="capability-grid">
+          <div class="capability-item-card">
+            <div class="capability-icon">🏭</div>
+            <h3 class="capability-title">Wholesale Production</h3>
+            <p class="capability-desc">High-capacity automated knitting and stitching hubs in Tirupur, India, supporting consistent volume production.</p>
+          </div>
+          <div class="capability-item-card">
+            <div class="capability-icon">🏷️</div>
+            <h3 class="capability-title">Private Label OEM</h3>
+            <p class="capability-desc">Custom neck labels, laser-engraved drawcords, custom hangtags, and barcoded retail packaging for your brand.</p>
+          </div>
+          <div class="capability-item-card">
+            <div class="capability-icon">🎽</div>
+            <h3 class="capability-title">Teamwear &amp; Sublimation</h3>
+            <p class="capability-desc">Zero-fade Italian dye sublimation machinery producing matched team kits with zero color peeling.</p>
+          </div>
+          <div class="capability-item-card">
+            <div class="capability-icon">🔬</div>
+            <h3 class="capability-title">5-Stage Quality Control</h3>
+            <p class="capability-desc">AATCC grade colorfastness tests, 100+ wash shrinkage benchmarks, and 100% inline needle detection inspection.</p>
+          </div>
+          <div class="capability-item-card">
+            <div class="capability-icon">⚡</div>
+            <h3 class="capability-title">Ready-to-Ship Inventory</h3>
+            <p class="capability-desc">In-stock wholesale baseline inventory available for 24–48 hour rapid dispatch across all commercial centers.</p>
+          </div>
+          <div class="capability-item-card">
+            <div class="capability-icon">📐</div>
+            <h3 class="capability-title">Custom Design &amp; Patterning</h3>
+            <p class="capability-desc">In-house pattern makers and tech-pack specialists to convert physical reference garments or sketches into bulk runs.</p>
+          </div>
+          <div class="capability-item-card">
+            <div class="capability-icon">🌍</div>
+            <h3 class="capability-title">Export Support</h3>
+            <p class="capability-desc">Full commercial invoice, customs documentation, HS coding, and air/sea container forwarding worldwide.</p>
+          </div>
+          <div class="capability-item-card">
+            <div class="capability-icon">🛡️</div>
+            <h3 class="capability-title">Low Defect Tolerance</h3>
+            <p class="capability-desc">Standardized AQL 2.5 inspection benchmarks guaranteeing clean seams, exact GSM, and zero optical defects.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 07 — FINAL B2B CTA -->
+    <section style="padding: var(--section-pad-y) 0; background: var(--bg-surface); border-bottom: 1px solid var(--border-color);">
+      <div class="container">
+        <div class="final-cta-banner">
+          <span class="eyebrow-badge">READY TO PARTNER</span>
+          <h2 class="final-cta-headline">
+            LET'S BUILD<br>
+            YOUR NEXT <span class="highlight-lime">COLLECTION.</span>
+          </h2>
+          <p class="text-muted-p" style="margin: 0 auto; max-width: 620px;">
+            Tell us what you're looking for and our trade sales team will help you configure the right sportswear range, margin structure, and delivery plan for your business.
+          </p>
+
+          <div class="final-cta-buttons-wrap">
+            <button type="button" class="btn-primary" data-open-rfq-modal>
+              <span>REQUEST WHOLESALE QUOTE</span>
+              <span>&rarr;</span>
+            </button>
+            <a href="private-label.html" class="btn-secondary">
+              <span>START PRIVATE LABEL PROJECT</span>
+            </a>
+            <a href="teamwear.html" class="btn-secondary">
+              <span>CREATE TEAMWEAR</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =========================================================================
+       GLOBAL FOOTER
+       ========================================================================= -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Brand Col -->
+        <div>
+          <a href="index1.php" class="brand-logo-wrap footer-logo-wrap" aria-label="TRIFLEX Home" style="margin-bottom: 16px;">
+            <img src="images/triflex-emblem-white.png" alt="TRIFLEX Emblem" class="brand-emblem-img-white">
+            <span class="brand-text-block">
+              <span class="brand-title-text text-white">TRIFLEX</span>
+              <span class="brand-subtitle-tag tag-lime">JUST KEEP GOING</span>
+            </span>
+          </a>
+          <p style="color: var(--text-secondary); font-size: 0.88rem; line-height: 1.6; max-width: 320px; margin-bottom: 20px;">
+            Sportswear built for businesses, brands and teams. Direct manufacturer, digital wholesale showroom, and private label production partner.
+          </p>
+          <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--accent-lime);">
+            FACTORY HUB &bull; TIRUPUR &bull; PAN-INDIA DISPATCH
+          </div>
+        </div>
+
+        <!-- Col 2: Showroom -->
+        <div>
+          <h4 class="footer-col-title">COLLECTIONS</h4>
+          <ul class="footer-links-list">
+            <li><a href="collection.html" class="footer-link">All Wholesale Lines</a></li>
+            <li><a href="men.html" class="footer-link">Men's Performance</a></li>
+            <li><a href="women.html" class="footer-link">Women's Sculpt Line</a></li>
+            <li><a href="kids.html" class="footer-link">Junior Academy Line</a></li>
+            <li><a href="teamwear.html" class="footer-link">Custom Teamwear &amp; Kits</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: B2B Solutions -->
+        <div>
+          <h4 class="footer-col-title">B2B SOLUTIONS</h4>
+          <ul class="footer-links-list">
+            <li><a href="wholesale.html" class="footer-link">Wholesale Supply</a></li>
+            <li><a href="private-label.html" class="footer-link">Private Label (OEM)</a></li>
+            <li><a href="teamwear.html" class="footer-link">Custom Teamwear</a></li>
+            <li><a href="manufacturing.html" class="footer-link">Manufacturing Credibility</a></li>
+            <li><a href="cart.html" class="footer-link">Wholesale RFQ Sheet</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Trade Desk -->
+        <div>
+          <h4 class="footer-col-title">TRADE DESK</h4>
+          <ul class="footer-links-list">
+            <li><a href="about.html" class="footer-link">About TRIFLEX</a></li>
+            <li><a href="contact.html" class="footer-link">Contact Trade Desk</a></li>
+            <li><a href="https://wa.me/919876543210" target="_blank" class="footer-link" style="color: var(--accent-lime);">WhatsApp Direct RFQ</a></li>
+            <li><span class="footer-link" style="color: var(--text-muted);">Tirupur / Mumbai / Delhi</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; <?php echo htmlspecialchars($current_year); ?> TRIFLEX SPORTSWEAR MFG. ALL RIGHTS RESERVED.</div>
+        <div style="display: flex; gap: 20px;">
+          <span>B2B WHOLESALE SPECIFICATION</span>
+          <span>GST COMPLIANT TRADE</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =========================================================================
+       MODALS & DRAWERS (ENQUIRY BAG, RFQ, SEARCH, QUICK ORDER, QUICK VIEW, MOBILE)
+       ========================================================================= -->
+
+  <!-- SIDE DRAWER FOR ENQUIRY BAG -->
+  <div class="drawer-backdrop" id="drawer-backdrop"></div>
+  <aside class="enquiry-drawer" id="enquiry-drawer" aria-label="B2B Enquiry Bag">
+    <div class="drawer-header">
+      <div class="drawer-title-group">
+        <h3 style="font-family: var(--font-heading); font-size: 1.25rem; font-weight: 800; text-transform: uppercase; margin: 0; color: var(--brand-navy);">ENQUIRY BAG <span id="drawer-items-count" style="color: var(--brand-navy); background: var(--accent-lime); padding: 1px 6px; border-radius: 3px; font-size: 0.85rem;"><?php echo (int)$initial_enquiry_count; ?></span></h3>
+      </div>
+      <button type="button" class="drawer-close-btn" data-close-enquiry-drawer aria-label="Close Bag">&times;</button>
+    </div>
+
+    <div class="drawer-body" id="drawer-items-container">
+      <!-- Items dynamically populated via js/cart_manager.js -->
+    </div>
+
+    <div class="drawer-footer">
+      <div class="drawer-summary-row">
+        <span>Minimum Order (MOQ)</span>
+        <span style="color: var(--brand-navy); font-weight: 700;">Verified per Article</span>
+      </div>
+      <div class="drawer-summary-row total">
+        <span>Total Enquiry Units</span>
+        <span id="drawer-total-pieces" style="color: var(--brand-navy); font-weight: 800;">0 Pcs</span>
+      </div>
+      <button type="button" class="btn-primary" id="drawer-quote-btn" style="width: 100%;" data-open-rfq-modal>
+        <span>REQUEST WHOLESALE QUOTE</span>
+        <span class="btn-arrow">&rarr;</span>
+      </button>
+      <a href="cart.html" class="btn-secondary btn-sm" style="text-align: center;" onclick="if(window.bagManager) window.bagManager.closeDrawer()">
+        REVIEW FULL RFQ SPEC SHEET
+      </a>
+    </div>
+  </aside>
+
+  <!-- MOBILE NAVIGATION DRAWER -->
+  <div class="drawer-backdrop" id="mobile-overlay"></div>
+  <aside class="enquiry-drawer" id="mobile-drawer" role="dialog" aria-label="Mobile Navigation Menu">
+    <div class="drawer-header">
+      <a href="index1.php" class="brand-logo-wrap" aria-label="TRIFLEX Home">
+        <img src="images/triflex-emblem-dark.png" alt="TRIFLEX Emblem" class="brand-emblem-img">
+        <span class="brand-text-block">
+          <span class="brand-title-text">TRIFLEX</span>
+          <span class="brand-subtitle-tag">JUST KEEP GOING</span>
+        </span>
+      </a>
+      <button type="button" class="drawer-close-btn" id="drawer-close-btn" aria-label="Close Navigation Menu">&times;</button>
+    </div>
+    <div class="drawer-body">
+      <!-- Home Overview Link -->
+      <a href="index1.php" class="mobile-nav-link active">
+        <span class="nav-link-main">
+          <span class="nav-idx">00</span>
+          <span>HOME / OVERVIEW</span>
+        </span>
+        <span class="nav-chevron">&rsaquo;</span>
+      </a>
+
+      <div class="mobile-nav-section-title">WHOLESALE SHOWROOM</div>
+      <a href="collection.html" class="mobile-nav-link ">
+        <span class="nav-link-main">
+          <span class="nav-idx">01</span>
+          <span>ALL COLLECTIONS</span>
+        </span>
+        <span class="nav-chevron">&rsaquo;</span>
+      </a>
+      <a href="men.html" class="mobile-nav-link ">
+        <span class="nav-link-main">
+          <span class="nav-idx">02</span>
+          <span>MEN'S PERFORMANCE</span>
+        </span>
+        <span class="nav-chevron">&rsaquo;</span>
+      </a>
+      <a href="women.html" class="mobile-nav-link ">
+        <span class="nav-link-main">
+          <span class="nav-idx">03</span>
+          <span>WOMEN'S SCULPT LINE</span>
+        </span>
+        <span class="nav-chevron">&rsaquo;</span>
+      </a>
+      <a href="kids.html" class="mobile-nav-link ">
+        <span class="nav-link-main">
+          <span class="nav-idx">04</span>
+          <span>JUNIOR ACADEMY LINE</span>
+        </span>
+        <span class="nav-chevron">&rsaquo;</span>
+      </a>
+      <a href="teamwear.html" class="mobile-nav-link ">
+        <span class="nav-link-main">
+          <span class="nav-idx">05</span>
+          <span>CUSTOM TEAMWEAR &amp; KITS</span>
+        </span>
+        <span class="nav-chevron">&rsaquo;</span>
+      </a>
+      
+      <div class="mobile-nav-section-title">B2B SOLUTIONS</div>
+      <a href="wholesale.html" class="mobile-nav-link ">
+        <span class="nav-link-main">
+          <span class="nav-idx">06</span>
+          <span>WHOLESALE SUPPLY</span>
+        </span>
+        <span class="nav-chevron">&rsaquo;</span>
+      </a>
+      <a href="private-label.html" class="mobile-nav-link ">
+        <span class="nav-link-main">
+          <span class="nav-idx">07</span>
+          <span>PRIVATE LABEL (OEM)</span>
+        </span>
+        <span class="nav-chevron">&rsaquo;</span>
+      </a>
+      <a href="manufacturing.html" class="mobile-nav-link ">
+        <span class="nav-link-main">
+          <span class="nav-idx">08</span>
+          <span>MANUFACTURING SCALE</span>
+        </span>
+        <span class="nav-chevron">&rsaquo;</span>
+      </a>
+      <a href="about.html" class="mobile-nav-link ">
+        <span class="nav-link-main">
+          <span class="nav-idx">09</span>
+          <span>THE TRIFLEX MANIFESTO</span>
+        </span>
+        <span class="nav-chevron">&rsaquo;</span>
+      </a>
+      <a href="contact.html" class="mobile-nav-link ">
+        <span class="nav-link-main">
+          <span class="nav-idx">10</span>
+          <span>TRADE DESK &amp; HUBS</span>
+        </span>
+        <span class="nav-chevron">&rsaquo;</span>
+      </a>
+
+      <!-- Quick Action Utilities -->
+      <div class="mobile-nav-quick-row">
+        <a href="https://wa.me/919876543210" target="_blank" class="mobile-nav-pill wa-pill" aria-label="Chat on WhatsApp">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+          <span>WhatsApp Trade</span>
+        </a>
+        <button type="button" class="mobile-nav-pill" data-open-quick-order aria-label="Open Quick Order Matrix">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+          <span>Quick Order</span>
+        </button>
+      </div>
+    </div>
+    <div class="drawer-footer">
+      <button type="button" class="btn-primary" style="width: 100%;" data-open-rfq-modal>
+        <span>LAUNCH WHOLESALE RFQ</span>
+        <span class="btn-arrow">&rarr;</span>
+      </button>
+    </div>
+  </aside>
+
+  <!-- SEARCH OVERLAY MODAL -->
+  <div class="modal-overlay" id="search-modal-overlay">
+    <div class="modal-container">
+      <div class="modal-header">
+        <div style="display: flex; align-items: center; gap: 10px; width: 100%;">
+          <span style="font-size: 1.2rem;">🔍</span>
+          <input type="text" id="search-modal-input" placeholder="Search by product code (TR-101), category, fabric, GSM..." style="width: 100%; background: none; border: none; font-size: 1.1rem; color: var(--text-primary); outline: none; font-family: var(--font-heading);">
+        </div>
+        <button type="button" class="drawer-close-btn search-modal-close" data-close-search>&times;</button>
+      </div>
+      <div class="modal-body" id="search-results-list">
+        <!-- Live search results -->
+      </div>
+    </div>
+  </div>
+
+  <!-- QUICK ORDER MODAL -->
+  <div class="modal-overlay" id="quick-order-modal-overlay">
+    <div class="modal-container">
+      <div class="modal-header">
+        <div>
+          <span class="eyebrow-badge" style="margin-bottom: 4px;">REPEAT WHOLESALE MATRIX</span>
+          <h3 style="font-family: var(--font-display); font-size: 1.4rem; text-transform: uppercase; margin: 0;">QUICK ORDER BY PRODUCT CODE</h3>
+        </div>
+        <button type="button" class="drawer-close-btn quick-order-modal-close" data-close-quick-order>&times;</button>
+      </div>
+      <div class="modal-body">
+        <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 16px;">
+          Direct matrix entry for verified product codes (e.g. <strong>TR-101</strong>, <strong>TR-201</strong>, <strong>TR-401</strong>). Specify bulk units and batch add to your enquiry bag.
+        </p>
+
+        <table class="quick-order-table">
+          <thead>
+            <tr>
+              <th style="width: 35%;">PRODUCT CODE</th>
+              <th style="width: 25%;">QUANTITY (PCS)</th>
+              <th style="width: 30%;">ARTICLE STATUS</th>
+              <th style="width: 10%;"></th>
+            </tr>
+          </thead>
+          <tbody id="quick-order-tbody">
+            <!-- Rows dynamically rendered -->
+          </tbody>
+        </table>
+
+        <datalist id="triflex-product-codes">
+          <option value="TR-101">TR-101 — AeroVent Pro Training Tee (Men)</option>
+          <option value="TR-102">TR-102 — HydroVent Tech Pique Polo (Men)</option>
+          <option value="TR-103">TR-103 — FlexMotion 4-Way Trackpant (Men)</option>
+          <option value="TR-104">TR-104 — Apex 2-in-1 Compression Shorts (Men)</option>
+          <option value="TR-105">TR-105 — UltraLite Windshield Jacket (Men)</option>
+          <option value="TR-106">TR-106 — CoreForm Relaxed Muscle Tank (Men)</option>
+          <option value="TR-201">TR-201 — SculptSeamless Compression Tights (Women)</option>
+          <option value="TR-202">TR-202 — CoreFlex High-Support Sports Bra (Women)</option>
+          <option value="TR-203">TR-203 — AirFlow Seamless Crop Top (Women)</option>
+          <option value="TR-204">TR-204 — Kinetic Flex Running Short (Women)</option>
+          <option value="TR-301">TR-301 — Junior Academy Pro Training Tee (Kids)</option>
+          <option value="TR-302">TR-302 — Junior Academy Poly Trackpant (Kids)</option>
+          <option value="TR-401">TR-401 — ProSub Football Match Kit (Teamwear)</option>
+          <option value="TR-402">TR-402 — Tournament Cricket Kit (Teamwear)</option>
+          <option value="TR-403">TR-403 — Courtside Basketball Uniform (Teamwear)</option>
+          <option value="TR-404">TR-404 — Marathon FeatherLite Singlet (Teamwear)</option>
+        </datalist>
+
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 16px;">
+          <button type="button" class="btn-secondary btn-sm" id="quick-order-add-row-btn">
+            + ADD ANOTHER ARTICLE
+          </button>
+          <button type="button" class="btn-primary" id="quick-order-add-all-btn">
+            ADD ALL TO ENQUIRY BAG &rarr;
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- QUICK VIEW MODAL -->
+  <div class="modal-overlay" id="quick-view-modal-overlay">
+    <div class="modal-container quick-view-modal-container">
+      <div class="modal-header">
+        <span class="eyebrow-badge" style="margin: 0;">DIGITAL SHOWROOM SPECIFICATION</span>
+        <button type="button" class="drawer-close-btn quick-view-modal-close" data-close-quick-view>&times;</button>
+      </div>
+      <div class="modal-body" id="quick-view-content">
+        <!-- Content injected dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- B2B WHOLESALE RFQ MODAL -->
+  <div class="modal-overlay" id="rfq-quote-modal-overlay">
+    <div class="modal-container">
+      <div class="modal-header">
+        <div>
+          <span class="eyebrow-badge" style="margin-bottom: 4px;">OFFICIAL B2B TRADE DESK</span>
+          <h3 style="font-family: var(--font-display); font-size: 1.4rem; text-transform: uppercase; margin: 0;">REQUEST WHOLESALE QUOTE</h3>
+        </div>
+        <button type="button" class="drawer-close-btn rfq-modal-close" data-close-rfq-modal>&times;</button>
+      </div>
+      <div class="modal-body">
+        <form id="b2b-rfq-form">
+          <div style="background: var(--bg-surface); border: 1px solid var(--border-color); border-radius: var(--radius-sm); padding: 14px; margin-bottom: 16px;">
+            <div style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-secondary); margin-bottom: 6px;">SELECTED ENQUIRY ARTICLES</div>
+            <div id="rfq-modal-items-summary">
+              <!-- Summary populated from Bag -->
+            </div>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px;">
+            <div class="form-group">
+              <label class="form-label" for="rfq-company">Company / Store Name *</label>
+              <input type="text" id="rfq-company" class="form-input" placeholder="e.g. Apex Sports India" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="rfq-contact">Contact Person Name *</label>
+              <input type="text" id="rfq-contact" class="form-input" placeholder="e.g. Rahul Sharma" required>
+            </div>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px;">
+            <div class="form-group">
+              <label class="form-label" for="rfq-email">Business Email *</label>
+              <input type="email" id="rfq-email" class="form-input" placeholder="buyer@company.com" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="rfq-phone">WhatsApp / Phone Number *</label>
+              <input type="tel" id="rfq-phone" class="form-input" placeholder="+91 98765 43210" required>
+            </div>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px;">
+            <div class="form-group">
+              <label class="form-label" for="rfq-country">Country / City *</label>
+              <input type="text" id="rfq-country" class="form-input" placeholder="e.g. Mumbai, India" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="rfq-customization">Customization / Branding</label>
+              <select id="rfq-customization" class="form-select">
+                <option value="Standard Stock Catalog">Standard Stock Catalog (No OEM)</option>
+                <option value="Private Label OEM (Custom Relabeling)">Private Label OEM (Custom Relabeling)</option>
+                <option value="Custom Teamwear (Sublimation & Names)">Custom Teamwear (Sublimation & Names)</option>
+                <option value="Full Custom Garment Manufacturing">Full Custom Garment Manufacturing</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="rfq-message">Project Notes / Target Timeline</label>
+            <textarea id="rfq-message" class="form-textarea" rows="3" placeholder="Specify required color combinations, target dispatch dates, or custom packing requirements..."></textarea>
+          </div>
+
+          <button type="submit" class="btn-primary" style="width: 100%; padding: 16px; margin-top: 8px;">
+            <span>SEND WHOLESALE ENQUIRY</span>
+            <span>&rarr;</span>
+          </button>
+        </form>
+
+        <div id="rfq-confirmation-view" style="display: none;">
+          <!-- Confirmation injected dynamically -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MOBILE STICKY BOTTOM BAR -->
+  <div class="mobile-sticky-enquiry-bar" id="mobile-sticky-bar">
+    <div class="mobile-bar-inner">
+      <div class="mobile-bag-pill" data-open-enquiry-drawer style="cursor: pointer;">
+        <span>📋 ENQUIRY BAG</span>
+        <span class="bag-badge-count" id="mobile-bag-count-num"><?php echo (int)$initial_enquiry_count; ?></span>
+      </div>
+      <div style="display: flex; gap: 8px;">
+        <button type="button" class="btn-secondary btn-sm" data-open-quick-order>
+          ⚡ QUICK ORDER
+        </button>
+        <button type="button" class="btn-primary btn-sm" data-open-rfq-modal>
+          QUOTE &rarr;
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- FLOATING PRESENTATION ACTIONS (Client Presentation Controls) -->
+  <div class="client-presentation-panel" id="client-presentation-panel">
+    <button type="button" class="client-preview-badge" id="open-mobile-device-btn" title="Click to preview the interactive mobile layout inside a smartphone frame">
+      <span class="badge-dot"></span>
+      <span>📱 PREVIEW MOBILE VIEW</span>
+    </button>
+    <button type="button" class="client-preview-badge secondary" id="open-design-preview-btn" title="Click to compare with original Figma design mockup">
+      <span>🔍 COMPARE DESIGN</span>
+    </button>
+  </div>
+
+  <!-- SMARTPHONE DEVICE SIMULATOR MODAL (Interactive Mobile Showcase) -->
+  <div class="mobile-device-modal-overlay" id="mobile-device-modal-overlay" role="dialog" aria-modal="true" aria-label="Smartphone Device Preview">
+    <div class="smartphone-frame-container">
+      <div class="smartphone-frame-header">
+        <span class="smartphone-frame-title">📱 Mobile Responsive View (390px Viewport)</span>
+        <button type="button" class="smartphone-frame-close" id="close-mobile-device-btn" aria-label="Close Mobile Simulator">&times;</button>
+      </div>
+      <div class="smartphone-outer-bezel">
+        <!-- Smartphone Notch / Dynamic Island -->
+        <div class="smartphone-island">
+          <div class="island-camera"></div>
+          <div class="island-sensor"></div>
+        </div>
+        
+        <!-- Embedded Interactive Mobile Frame -->
+        <iframe src="index1.php" class="smartphone-iframe" title="Interactive Mobile Hero Preview"></iframe>
+        
+        <!-- Home Swipe Indicator Bar -->
+        <div class="smartphone-home-bar"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DESIGN COMPARISON MODAL -->
+  <div class="design-modal-overlay" id="design-modal-overlay" role="dialog" aria-modal="true" aria-label="Client Design Reference Comparison">
+    <div class="design-modal-box">
+      <div class="design-modal-header">
+        <span class="design-modal-title">Client Design Reference (Desktop &amp; Mobile)</span>
+        <button type="button" class="design-modal-close" id="close-design-preview-btn" aria-label="Close Comparison Modal">&times;</button>
+      </div>
+      <div class="design-modal-body">
+        <p style="color: var(--hero-slate); font-size: 0.8rem; margin-bottom: 16px;">
+          Original reference image supplied for hero section design matching:
+        </p>
+        <img src="images/hero-mockup-reference.png" alt="Client Design Reference" class="design-modal-img">
+      </div>
+    </div>
+  </div>
+
+  <!-- SCRIPTS -->
+  <script src="js/products.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/hero-dark.js"></script>
+</body>
+</html>
