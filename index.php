@@ -1,19 +1,9 @@
-<?php
-/**
- * TRIFLEX Sportswear - Dark Cinematic Hero Section Showcase
- * File: index1.php
- * Accurately created to match the client's design reference
- */
-$page_title = "TRIFLEX | Just Keep Going — Performance Apparel & Wholesale Manufacturing";
-$current_year = date('Y');
-$initial_enquiry_count = 4; // Matches the client's reference badge (4)
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title><?php echo htmlspecialchars($page_title); ?></title>
+  <title>TRIFLEX | Just Keep Going — Performance Apparel &amp; Wholesale Manufacturing</title>
   <meta name="description" content="TRIFLEX is a high-performance sportswear wholesale, OEM and private-label manufacturer for brands, retailers, distributors and teams. Built for business. Just keep going.">
   
   <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
@@ -35,6 +25,93 @@ $initial_enquiry_count = 4; // Matches the client's reference badge (4)
 <body id="home-page-hero1" class="hero1-page-theme">
 
   <!-- =========================================================================
+       TOP FLOATING STICKY HEADER (TRANSPARENT FROSTED GLASS STYLE)
+       ========================================================================= -->
+  <header class="hero-dark-header" id="hero-header">
+    <div class="hero-header-inner">
+      
+      <!-- Left: Brand Logo Lockup (White Emblem + TRIFLEX + JUST KEEP GOING) -->
+      <a href="index.html" class="hero-brand-lockup" aria-label="TRIFLEX Homepage">
+        <img src="images/triflex-emblem-white.png" alt="TRIFLEX Emblem" class="hero-logo-emblem">
+        <div class="hero-logo-text-wrap">
+          <span class="hero-brand-name">TRIFLEX</span>
+          <span class="hero-brand-motto">JUST KEEP GOING</span>
+        </div>
+      </a>
+
+      <!-- Center: Primary Navigation Links -->
+      <nav class="hero-desktop-nav" aria-label="Primary Navigation">
+        <ul class="hero-nav-links">
+          <li class="hero-nav-item">
+            <a href="collection.html" class="hero-nav-anchor has-arrow">COLLECTION</a>
+            <div class="hero-dropdown-box">
+              <a href="collection.html" class="hero-dropdown-link">All Wholesale Lines</a>
+              <a href="men.html" class="hero-dropdown-link">Men's Performance</a>
+              <a href="women.html" class="hero-dropdown-link">Women's Sculpt Line</a>
+              <a href="kids.html" class="hero-dropdown-link">Junior Academy Line</a>
+              <a href="teamwear.html" class="hero-dropdown-link">Custom Teamwear &amp; Kits</a>
+            </div>
+          </li>
+          <li class="hero-nav-item">
+            <a href="wholesale.html" class="hero-nav-anchor has-arrow">SOLUTIONS</a>
+            <div class="hero-dropdown-box">
+              <a href="wholesale.html" class="hero-dropdown-link">Wholesale Supply</a>
+              <a href="private-label.html" class="hero-dropdown-link">Private Label OEM</a>
+              <a href="teamwear.html" class="hero-dropdown-link">Custom Teamwear</a>
+              <a href="manufacturing.html" class="hero-dropdown-link">Factory Production Hub</a>
+            </div>
+          </li>
+          <li class="hero-nav-item">
+            <a href="manufacturing.html" class="hero-nav-anchor">MANUFACTURING</a>
+          </li>
+          <li class="hero-nav-item">
+            <a href="about.html" class="hero-nav-anchor">ABOUT</a>
+          </li>
+          <li class="hero-nav-item">
+            <a href="contact.html" class="hero-nav-anchor">CONTACT</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Right: Action Buttons (Search, Bag with Badge, Lime Enquire Pill) -->
+      <div class="hero-header-actions">
+        <!-- Search Trigger Icon -->
+        <button type="button" class="hero-search-btn" data-open-search aria-label="Search catalog articles">
+          <svg class="hero-search-icon" viewBox="0 0 24 24">
+            <circle cx="11" cy="11" r="7"></circle>
+            <line x1="16.5" y1="16.5" x2="22" y2="22"></line>
+          </svg>
+        </button>
+
+        <!-- Divider | -->
+        <span class="hero-action-divider" aria-hidden="true"></span>
+
+        <!-- Enquiry Bag Button with Lime Badge (4) -->
+        <button type="button" class="hero-bag-btn" data-open-enquiry-drawer aria-label="Open B2B Enquiry Bag">
+          <span>ENQUIRY BAG</span>
+          <span class="hero-bag-badge bag-badge-count" id="hero-bag-badge">4</span>
+        </button>
+
+        <!-- Vibrant Lime ENQUIRE -> Pill Button -->
+        <button type="button" class="hero-enquire-pill-btn" data-open-rfq-modal aria-label="Start Wholesale RFQ">
+          <span>ENQUIRE</span>
+          <span class="hero-enquire-arrow">&rarr;</span>
+        </button>
+
+        <!-- Mobile Hamburger Toggle Button -->
+        <button type="button" class="hero-mobile-toggle-btn" id="drawer-open-btn" aria-label="Open Mobile Menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- =========================================================================
        HERO SECTION — EXACT REPLICA OF CLIENT'S DESIGN REFERENCE
        ========================================================================= -->
   <section class="hero-dark-master" id="hero-showcase" aria-label="TRIFLEX Hero Showcase">
@@ -54,91 +131,6 @@ $initial_enquiry_count = 4; // Matches the client's reference badge (4)
       <div class="hero-mesh-overlay"></div>
       <div class="hero-vignette-overlay"></div>
     </div>
-
-    <!-- Integrated Dark Header -->
-    <header class="hero-dark-header" id="hero-header">
-      <div class="hero-header-inner">
-        
-        <!-- Left: Brand Logo Lockup (White Emblem + TRIFLEX + JUST KEEP GOING) -->
-        <a href="index1.php" class="hero-brand-lockup" aria-label="TRIFLEX Homepage">
-          <img src="images/triflex-emblem-white.png" alt="TRIFLEX Emblem" class="hero-logo-emblem">
-          <div class="hero-logo-text-wrap">
-            <span class="hero-brand-name">TRIFLEX</span>
-            <span class="hero-brand-motto">JUST KEEP GOING</span>
-          </div>
-        </a>
-
-        <!-- Center: Primary Navigation Links -->
-        <nav class="hero-desktop-nav" aria-label="Primary Navigation">
-          <ul class="hero-nav-links">
-            <li class="hero-nav-item">
-              <a href="collection.html" class="hero-nav-anchor has-arrow">COLLECTION</a>
-              <div class="hero-dropdown-box">
-                <a href="collection.html" class="hero-dropdown-link">All Wholesale Lines</a>
-                <a href="men.html" class="hero-dropdown-link">Men's Performance</a>
-                <a href="women.html" class="hero-dropdown-link">Women's Sculpt Line</a>
-                <a href="kids.html" class="hero-dropdown-link">Junior Academy Line</a>
-                <a href="teamwear.html" class="hero-dropdown-link">Custom Teamwear &amp; Kits</a>
-              </div>
-            </li>
-            <li class="hero-nav-item">
-              <a href="wholesale.html" class="hero-nav-anchor has-arrow">SOLUTIONS</a>
-              <div class="hero-dropdown-box">
-                <a href="wholesale.html" class="hero-dropdown-link">Wholesale Supply</a>
-                <a href="private-label.html" class="hero-dropdown-link">Private Label OEM</a>
-                <a href="teamwear.html" class="hero-dropdown-link">Custom Teamwear</a>
-                <a href="manufacturing.html" class="hero-dropdown-link">Factory Production Hub</a>
-              </div>
-            </li>
-            <li class="hero-nav-item">
-              <a href="manufacturing.html" class="hero-nav-anchor">MANUFACTURING</a>
-            </li>
-            <li class="hero-nav-item">
-              <a href="about.html" class="hero-nav-anchor">ABOUT</a>
-            </li>
-            <li class="hero-nav-item">
-              <a href="contact.html" class="hero-nav-anchor">CONTACT</a>
-            </li>
-          </ul>
-        </nav>
-
-        <!-- Right: Action Buttons (Search, Bag with Badge, Lime Enquire Pill) -->
-        <div class="hero-header-actions">
-          <!-- Search Trigger Icon -->
-          <button type="button" class="hero-search-btn" data-open-search aria-label="Search catalog articles">
-            <svg class="hero-search-icon" viewBox="0 0 24 24">
-              <circle cx="11" cy="11" r="7"></circle>
-              <line x1="16.5" y1="16.5" x2="22" y2="22"></line>
-            </svg>
-          </button>
-
-          <!-- Divider | -->
-          <span class="hero-action-divider" aria-hidden="true"></span>
-
-          <!-- Enquiry Bag Button with Lime Badge (4) -->
-          <button type="button" class="hero-bag-btn" data-open-enquiry-drawer aria-label="Open B2B Enquiry Bag">
-            <span>ENQUIRY BAG</span>
-            <span class="hero-bag-badge bag-badge-count" id="hero-bag-badge"><?php echo (int)$initial_enquiry_count; ?></span>
-          </button>
-
-          <!-- Vibrant Lime ENQUIRE -> Pill Button -->
-          <button type="button" class="hero-enquire-pill-btn" data-open-rfq-modal aria-label="Start Wholesale RFQ">
-            <span>ENQUIRE</span>
-            <span class="hero-enquire-arrow">&rarr;</span>
-          </button>
-
-          <!-- Mobile Hamburger Toggle Button -->
-          <button type="button" class="hero-mobile-toggle-btn" id="drawer-open-btn" aria-label="Open Mobile Menu">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
-              <line x1="3" y1="6" x2="21" y2="6"></line>
-              <line x1="3" y1="12" x2="21" y2="12"></line>
-              <line x1="3" y1="18" x2="21" y2="18"></line>
-            </svg>
-          </button>
-        </div>
-
-      </div>
-    </header>
 
     <!-- Central Hero Stage -->
     <div class="hero-stage">
@@ -452,7 +444,7 @@ $initial_enquiry_count = 4; // Matches the client's reference badge (4)
         <div class="section-header-editorial">
           <div>
             <span class="mono-tag" style="color: var(--accent-lime);">CORE WHOLESALE ARTICLES</span>
-            <h2 class="heading-xl">NEW COLLECTION / <?php echo htmlspecialchars($current_year); ?></h2>
+            <h2 class="heading-xl">NEW COLLECTION / 2026</h2>
           </div>
           <button type="button" class="btn-secondary" data-open-quick-order>
             ⚡ QUICK BULK ORDER
@@ -592,7 +584,7 @@ $initial_enquiry_count = 4; // Matches the client's reference badge (4)
       <div class="footer-grid">
         <!-- Brand Col -->
         <div>
-          <a href="index1.php" class="brand-logo-wrap footer-logo-wrap" aria-label="TRIFLEX Home" style="margin-bottom: 16px;">
+          <a href="index.php" class="brand-logo-wrap footer-logo-wrap" aria-label="TRIFLEX Home" style="margin-bottom: 16px;">
             <img src="images/triflex-emblem-white.png" alt="TRIFLEX Emblem" class="brand-emblem-img-white">
             <span class="brand-text-block">
               <span class="brand-title-text text-white">TRIFLEX</span>
@@ -644,7 +636,7 @@ $initial_enquiry_count = 4; // Matches the client's reference badge (4)
       </div>
 
       <div class="footer-bottom">
-        <div>&copy; <?php echo htmlspecialchars($current_year); ?> TRIFLEX SPORTSWEAR MFG. ALL RIGHTS RESERVED.</div>
+        <div>&copy; 2026 TRIFLEX SPORTSWEAR MFG. ALL RIGHTS RESERVED.</div>
         <div style="display: flex; gap: 20px;">
           <span>B2B WHOLESALE SPECIFICATION</span>
           <span>GST COMPLIANT TRADE</span>
@@ -662,7 +654,7 @@ $initial_enquiry_count = 4; // Matches the client's reference badge (4)
   <aside class="enquiry-drawer" id="enquiry-drawer" aria-label="B2B Enquiry Bag">
     <div class="drawer-header">
       <div class="drawer-title-group">
-        <h3 style="font-family: var(--font-heading); font-size: 1.25rem; font-weight: 800; text-transform: uppercase; margin: 0; color: var(--brand-navy);">ENQUIRY BAG <span id="drawer-items-count" style="color: var(--brand-navy); background: var(--accent-lime); padding: 1px 6px; border-radius: 3px; font-size: 0.85rem;"><?php echo (int)$initial_enquiry_count; ?></span></h3>
+        <h3 style="font-family: var(--font-heading); font-size: 1.25rem; font-weight: 800; text-transform: uppercase; margin: 0; color: var(--brand-navy);">ENQUIRY BAG <span id="drawer-items-count" style="color: var(--brand-navy); background: var(--accent-lime); padding: 1px 6px; border-radius: 3px; font-size: 0.85rem;">4</span></h3>
       </div>
       <button type="button" class="drawer-close-btn" data-close-enquiry-drawer aria-label="Close Bag">&times;</button>
     </div>
@@ -694,7 +686,7 @@ $initial_enquiry_count = 4; // Matches the client's reference badge (4)
   <div class="drawer-backdrop" id="mobile-overlay"></div>
   <aside class="enquiry-drawer" id="mobile-drawer" role="dialog" aria-label="Mobile Navigation Menu">
     <div class="drawer-header">
-      <a href="index1.php" class="brand-logo-wrap" aria-label="TRIFLEX Home">
+      <a href="index.php" class="brand-logo-wrap" aria-label="TRIFLEX Home">
         <img src="images/triflex-emblem-dark.png" alt="TRIFLEX Emblem" class="brand-emblem-img">
         <span class="brand-text-block">
           <span class="brand-title-text">TRIFLEX</span>
@@ -705,7 +697,7 @@ $initial_enquiry_count = 4; // Matches the client's reference badge (4)
     </div>
     <div class="drawer-body">
       <!-- Home Overview Link -->
-      <a href="index1.php" class="mobile-nav-link active">
+      <a href="index.php" class="mobile-nav-link active">
         <span class="nav-link-main">
           <span class="nav-idx">00</span>
           <span>HOME / OVERVIEW</span>
@@ -976,7 +968,7 @@ $initial_enquiry_count = 4; // Matches the client's reference badge (4)
     <div class="mobile-bar-inner">
       <div class="mobile-bag-pill" data-open-enquiry-drawer style="cursor: pointer;">
         <span>📋 ENQUIRY BAG</span>
-        <span class="bag-badge-count" id="mobile-bag-count-num"><?php echo (int)$initial_enquiry_count; ?></span>
+        <span class="bag-badge-count" id="mobile-bag-count-num">4</span>
       </div>
       <div style="display: flex; gap: 8px;">
         <button type="button" class="btn-secondary btn-sm" data-open-quick-order>
@@ -1015,7 +1007,7 @@ $initial_enquiry_count = 4; // Matches the client's reference badge (4)
         </div>
         
         <!-- Embedded Interactive Mobile Frame -->
-        <iframe src="index1.php" class="smartphone-iframe" title="Interactive Mobile Hero Preview"></iframe>
+        <iframe src="index.html" class="smartphone-iframe" title="Interactive Mobile Hero Preview"></iframe>
         
         <!-- Home Swipe Indicator Bar -->
         <div class="smartphone-home-bar"></div>

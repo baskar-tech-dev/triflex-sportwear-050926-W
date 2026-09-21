@@ -153,15 +153,17 @@
       });
     }
 
-    // Header sticky styling on scroll
-    window.addEventListener('scroll', function () {
+    // Header floating sticky styling on scroll
+    function handleHeaderScroll() {
       if (!darkHeader) return;
-      if (window.scrollY > 40) {
+      if (window.scrollY > 20) {
         darkHeader.classList.add('header-scrolled');
       } else {
         darkHeader.classList.remove('header-scrolled');
       }
-    }, { passive: true });
+    }
+    window.addEventListener('scroll', handleHeaderScroll, { passive: true });
+    handleHeaderScroll();
 
     // Autoplay handling
     function startAutoplay() {

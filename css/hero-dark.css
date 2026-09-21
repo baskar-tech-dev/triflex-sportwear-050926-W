@@ -38,6 +38,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  padding-top: clamp(74px, 8vw, 86px);
   overflow: hidden;
   user-select: none;
   -webkit-user-select: none;
@@ -76,19 +77,19 @@
 }
 
 .hero-bg-slide-mens {
-  background-image: url('../images/hero-bg-dark.jpg');
+  background-image: url('../images/hero-bg-dark.png');
 }
 
 .hero-bg-slide-womens {
-  background-image: url('../images/hero-bg-women.jpg');
+  background-image: url('../images/hero-bg-slide-womens.png');
 }
 
 .hero-bg-slide-kids {
-  background-image: url('../images/hero-bg-kids.jpg');
+  background-image: url('../images/hero-bg-slide-kids.png');
 }
 
 .hero-bg-slide-teams {
-  background-image: url('../images/hero-bg-dark.jpg');
+  background-image: url('../images/hero-bg-dark.png');
   filter: hue-rotate(20deg) contrast(1.1);
 }
 
@@ -146,27 +147,33 @@
   pointer-events: none;
 }
 
-/* --- DARK INTEGRATED HEADER --- */
+/* --- DARK FLOATING STICKY HEADER (TRANSPARENT STYLE) --- */
 .hero-dark-header {
-  position: relative;
-  z-index: 50;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   width: 100%;
+  z-index: 950;
   padding: 22px 0;
-  background: linear-gradient(to bottom, rgba(7, 10, 14, 0.75) 0%, rgba(7, 10, 14, 0) 100%);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-  transition: background 0.3s ease, border-color 0.3s ease, padding 0.3s ease;
+  background: linear-gradient(to bottom, rgba(7, 10, 14, 0.75) 0%, rgba(7, 10, 14, 0.2) 70%, transparent 100%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  transition: background 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              padding 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              backdrop-filter 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              -webkit-backdrop-filter 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1);
   box-sizing: border-box;
 }
 
 .hero-dark-header.header-scrolled {
-  position: sticky;
-  top: 0;
-  padding: 14px 0;
-  background: rgba(7, 10, 14, 0.94);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  padding: 12px 0;
+  background: rgba(7, 10, 14, 0.75);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.55), 0 1px 0 rgba(255, 255, 255, 0.05);
 }
 
 .hero-header-inner {
@@ -1109,12 +1116,34 @@
   /* Hero Container Dynamic Sizing */
   .hero-dark-master {
     min-height: auto;
+    padding-top: 76px;
     padding-bottom: 12px;
+  }
+
+  /* Photographic fabric texture slide backgrounds: reposition to show athlete */
+  .hero-bg-slide {
+    background-position: 71.5% 25%;
+    background-size: cover;
+  }
+
+  /* Cinematic mobile overlay: keep text legible on left while revealing person on right */
+  .hero-vignette-overlay {
+    background: 
+      linear-gradient(to right, rgba(7, 10, 14, 0.88) 0%, rgba(7, 10, 14, 0.58) 42%, rgba(7, 10, 14, 0.1) 70%, rgba(7, 10, 14, 0.28) 100%),
+      linear-gradient(to top, rgba(7, 10, 14, 0.95) 0%, transparent 18%, transparent 82%, rgba(7, 10, 14, 0.7) 100%);
+  }
+
+  .hero-light-streaks {
+    opacity: 0.6;
   }
 
   /* Header adjustments: Hide desktop nav and buttons, show hamburger */
   .hero-dark-header {
     padding: 16px 0;
+  }
+
+  .hero-dark-header.header-scrolled {
+    padding: 10px 0;
   }
 
   .hero-header-inner {
@@ -1157,45 +1186,93 @@
     gap: 0;
   }
 
+  /* Tagline row - enlarged & prominent */
   .hero-eyebrow-row {
-    margin-bottom: 14px;
+    margin-bottom: 12px;
     width: 100%;
+    gap: 12px;
   }
 
   .hero-eyebrow-tag {
-    font-size: 0.68rem;
+    font-size: 0.85rem;
+    font-weight: 800;
     letter-spacing: 0.18em;
+    color: var(--hero-white);
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.85);
   }
 
   .hero-eyebrow-hairline {
     flex: 1;
-    max-width: 120px;
+    max-width: 80px;
+    height: 1.5px;
+    background: var(--hero-lime);
+    box-shadow: 0 0 8px var(--hero-lime-glow);
   }
 
   /* Headline breaks into 3 separate bold italic lines: JUST / KEEP / GOING. */
   .hero-headline {
-    font-size: clamp(3.2rem, 13.5vw, 4.8rem);
+    font-size: clamp(3.4rem, 14vw, 4.8rem);
     line-height: 0.88;
     letter-spacing: -0.02em;
-    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.7));
+    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.85));
   }
 
   .hero-headline-line-split {
     display: block !important;
   }
 
-  /* Mobile Category Pills List (Visible on mobile, matching mockup) */
+  /* Mobile Category Pills List: Compact & sleek to give space to background athlete */
   .hero-mobile-pills-wrap {
     display: block;
-    margin-top: 22px;
-    margin-bottom: 18px;
+    margin-top: 14px;
+    margin-bottom: 14px;
+    width: 100%;
+  }
+
+  .hero-mobile-pills-list {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    width: 100%;
+    max-width: 250px;
+  }
+
+  .hero-mobile-pill-item {
+    padding: 7px 14px;
+    min-height: 34px;
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+    background: rgba(10, 15, 22, 0.55);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+  }
+
+  .hero-mobile-pill-item.active {
+    background: rgba(204, 255, 0, 0.12);
+    border-color: var(--hero-lime);
+    box-shadow: 0 0 14px rgba(204, 255, 0, 0.22);
+  }
+
+  .hero-mobile-pill-left {
+    gap: 10px;
+  }
+
+  .hero-mobile-pill-radio {
+    width: 12px;
+    height: 12px;
+  }
+
+  .hero-mobile-pill-radio-dot {
+    width: 5px;
+    height: 5px;
   }
 
   /* Built For List: Positioned directly underneath the category pills */
   .hero-built-for-card {
     padding-left: 0;
     margin-top: 4px;
-    margin-bottom: 24px;
+    margin-bottom: 20px;
     gap: 14px;
   }
 
@@ -1275,12 +1352,8 @@
   }
 
   /* Hide floating preview badge on mobile to avoid screen clutter */
-  .client-preview-badge {
-    bottom: 80px;
-    left: 16px;
-    padding: 6px 12px;
-    font-size: 0.66rem;
-    opacity: 0.85;
+  .client-presentation-panel {
+    display: none !important;
   }
 }
 
@@ -1288,8 +1361,16 @@
    COMPACT SMARTPHONE VIEWPORT (<= 480px - iPhone SE, Android 360-400px)
    ========================================================================== */
 @media (max-width: 480px) {
+  .hero-dark-master {
+    padding-top: 66px;
+  }
+
   .hero-dark-header {
     padding: 14px 0;
+  }
+
+  .hero-dark-header.header-scrolled {
+    padding: 8px 0;
   }
 
   .hero-header-inner {
@@ -1309,48 +1390,58 @@
   }
 
   .hero-stage {
-    padding: 14px 16px 0;
+    padding: 12px 16px 0;
+  }
+
+  .hero-eyebrow-row {
+    margin-bottom: 8px;
   }
 
   .hero-eyebrow-tag {
-    font-size: 0.64rem;
-    letter-spacing: 0.15em;
+    font-size: 0.8rem;
+    letter-spacing: 0.16em;
+    font-weight: 800;
+  }
+
+  .hero-eyebrow-hairline {
+    max-width: 60px;
   }
 
   .hero-headline {
-    font-size: clamp(2.85rem, 13vw, 3.8rem);
+    font-size: clamp(3.1rem, 13.5vw, 4rem);
     line-height: 0.88;
   }
 
   .hero-mobile-pills-wrap {
-    margin-top: 18px;
-    margin-bottom: 16px;
+    margin-top: 10px;
+    margin-bottom: 12px;
   }
 
   .hero-mobile-pills-list {
-    gap: 7px;
+    gap: 5px;
+    max-width: 230px;
   }
 
   .hero-mobile-pill-item {
-    padding: 9px 14px;
-    min-height: 42px;
-    font-size: 0.74rem;
+    padding: 6px 12px;
+    min-height: 31px;
+    font-size: 0.67rem;
     letter-spacing: 0.08em;
   }
 
   .hero-mobile-pill-radio {
-    width: 13px;
-    height: 13px;
+    width: 11px;
+    height: 11px;
   }
 
   .hero-mobile-pill-radio-dot {
-    width: 5px;
-    height: 5px;
+    width: 4px;
+    height: 4px;
   }
 
   .hero-built-for-card {
     gap: 12px;
-    margin-bottom: 20px;
+    margin-bottom: 16px;
   }
 
   .hero-built-role {
@@ -1378,12 +1469,17 @@
 /* Extra small devices (<= 360px) */
 @media (max-width: 360px) {
   .hero-headline {
-    font-size: 2.65rem;
+    font-size: 2.85rem;
+  }
+
+  .hero-mobile-pills-list {
+    max-width: 210px;
   }
 
   .hero-mobile-pill-item {
-    font-size: 0.7rem;
-    padding: 8px 12px;
+    font-size: 0.64rem;
+    padding: 5px 10px;
+    min-height: 29px;
   }
 
   .hero-built-role {
